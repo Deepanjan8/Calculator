@@ -1,7 +1,6 @@
 name: Build and Sign APK
 
 on:
-  # অটোমেটিক বিল্ড বন্ধ, এখন শুধু বাটন টিপলে রান হবে
   workflow_dispatch:
 
 jobs:
@@ -19,7 +18,7 @@ jobs:
 
     - name: Decode Keystore
       run: |
-        echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > app/release.jks
+        echo "${{ secrets.KEYSTORE_BASE64 }}" | base64 --decode > app/nexura_release.jks
 
     - name: Build and Sign APK
       run: ./gradlew assembleRelease
@@ -31,6 +30,5 @@ jobs:
     - name: Upload Signed APK
       uses: actions/upload-artifact@v4
       with:
-        name: Neo-Calculator-Signed
+        name: Nexura-Calculator-Signed
         path: app/build/outputs/apk/release/*.apk
-
