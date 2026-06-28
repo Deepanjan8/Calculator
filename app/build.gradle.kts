@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace = "com.deepanjan.neocalculator"
+    namespace = "com.nexuralabs.calculator"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.deepanjan.neocalculator"
+        applicationId = "com.nexuralabs.calculator"
         minSdk = 26
         targetSdk = 34
         versionCode = 2
