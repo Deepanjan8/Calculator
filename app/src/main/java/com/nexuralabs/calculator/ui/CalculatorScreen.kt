@@ -14,8 +14,8 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
 import androidx.compose.material.icons.automirrored.filled.Backspace
+import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -128,45 +128,105 @@ fun CalculatorScreen(navController: NavController) {
             )
         }
     ) { padding ->
-        Column(modifier = Modifier.fillMaxSize().padding(padding).padding(horizontal = 20.dp)) {
-            Column(modifier = Modifier.weight(2.2f).fillMaxWidth(), horizontalAlignment = Alignment.End, verticalArrangement = Arrangement.Bottom) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text(
-                        text = expression.ifEmpty { "0" },
-                        fontSize = expressionFontSize,
-                        fontWeight = FontWeight.Light,
-                        textAlign = TextAlign.End,
-                        maxLines = 1,
-                        modifier = Modifier.weight(1f).horizontalScroll(rememberScrollState())
-                    )
-                    IconButton(onClick = { viewModel.onButtonClick("⌫") }) {
-                        Icon(Icons.AutoMirrored.Filled.Backspace, "Delete", tint = MaterialTheme.colorScheme.primary)
+        BoxWithConstraints(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(padding)
+                .padding(horizontal = 20.dp)
+        ) {
+            val isWideScreen = maxWidth > 600.dp // Adaptive break-point for Tablets/Landscape
+
+            if (isWideScreen) {
+                // Tablet Layout: Display on left, Keypad on right
+                Row(
+                    modifier = Modifier.fillMaxSize(),
+                    horizontalArrangement = Arrangement.spacedBy(24.dp),
+                    verticalAlignment = Alignment.CenterVertically
+                ) {
+                    Column(
+                        modifier = Modifier.weight(1f).fillMaxHeight().padding(vertical = 32.dp),
+                        horizontalAlignment = Alignment.End,
+                        verticalArrangement = Arrangement.Center
+                    ) {
+                        DisplaySection(expression, preview, expressionFontSize, previewFontSize, viewModel)
+                    }
+                    LazyVerticalGrid(
+                        columns = GridCells.Fixed(4),
+                        contentPadding = PaddingValues(vertical = 32.dp),
+                        verticalArrangement = Arrangement.spacedBy(16.dp),
+                        horizontalArrangement = Arrangement.spacedBy(16.dp),
+                        modifier = Modifier.weight(1f)
+                    ) {
+                        items(keypadButtons) { btn ->
+                            KeypadButton(btn) { handleButtonClick(btn, hapticEnabled, context, viewModel) }
+                        }
                     }
                 }
-                Text(
-                    text = preview.ifEmpty { "0" },
-                    fontSize = previewFontSize,
-                    fontWeight = FontWeight.Bold,
-                    textAlign = TextAlign.End,
-                    maxLines = 1,
-                    modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState())
-                )
-                Spacer(Modifier.height(40.dp))
-            }
-
-            LazyVerticalGrid(columns = GridCells.Fixed(4), contentPadding = PaddingValues(bottom = 32.dp), verticalArrangement = Arrangement.spacedBy(16.dp), horizontalArrangement = Arrangement.spacedBy(16.dp), modifier = Modifier.weight(3.8f)) {
-                items(keypadButtons) { btn ->
-                    KeypadButton(btn) {
-                        if (hapticEnabled) {
-                            val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator
-                            vibrator?.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK))
+            } else {
+                // Normal Phone Layout: Display top, Keypad bottom
+                Column(modifier = Modifier.fillMaxSize()) {
+                    Column(
+                        modifier = Modifier.weight(2.2f).fillMaxWidth(),
+                        horizontalAlignment = Alignment.End,
+                        verticalArrangement = Arrangement.Bottom
+                    ) {
+                        DisplaySection(expression, preview, expressionFontSize, previewFontSize, viewModel)
+                        Spacer(Modifier.height(40.dp))
+                    }
+                    LazyVerticalGrid(
+                        columns = GridCells.Fixed(4),
+                        contentPadding = PaddingValues(bottom = 32.dp),
+                        verticalArrangement = Arrangement.spacedBy(16.dp),
+                        horizontalArrangement = Arrangement.spacedBy(16.dp),
+                        modifier = Modifier.weight(3.8f)
+                    ) {
+                        items(keypadButtons) { btn ->
+                            KeypadButton(btn) { handleButtonClick(btn, hapticEnabled, context, viewModel) }
                         }
-                        viewModel.onButtonClick(btn.command)
                     }
                 }
             }
         }
     }
+}
+
+@Composable
+private fun DisplaySection(
+    expression: String,
+    preview: String,
+    expressionFontSize: androidx.compose.ui.unit.TextUnit,
+    previewFontSize: androidx.compose.ui.unit.TextUnit,
+    viewModel: CalculatorViewModel
+) {
+    Row(verticalAlignment = Alignment.CenterVertically) {
+        Text(
+            text = expression.ifEmpty { "0" },
+            fontSize = expressionFontSize,
+            fontWeight = FontWeight.Light,
+            textAlign = TextAlign.End,
+            maxLines = 1,
+            modifier = Modifier.weight(1f).horizontalScroll(rememberScrollState())
+        )
+        IconButton(onClick = { viewModel.onButtonClick("⌫") }) {
+            Icon(Icons.AutoMirrored.Filled.Backspace, "Delete", tint = MaterialTheme.colorScheme.primary)
+        }
+    }
+    Text(
+        text = preview.ifEmpty { "0" },
+        fontSize = previewFontSize,
+        fontWeight = FontWeight.Bold,
+        textAlign = TextAlign.End,
+        maxLines = 1,
+        modifier = Modifier.fillMaxWidth().horizontalScroll(rememberScrollState())
+    )
+}
+
+private fun handleButtonClick(btn: KeypadButton, hapticEnabled: Boolean, context: Context, viewModel: CalculatorViewModel) {
+    if (hapticEnabled) {
+        val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator
+        vibrator?.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK))
+    }
+    viewModel.onButtonClick(btn.command)
 }
 
 private val keypadButtons = listOf(
