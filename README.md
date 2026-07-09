@@ -69,7 +69,7 @@ Just fast, reliable tools that work entirely on your device.
 
 🔒 Privacy First
 
-- 100% Open Source (GPL-3.0)
+- 100% Open Source (MIT)
 - No Internet Permission
 - No Ads
 - No Data Collection
@@ -103,7 +103,7 @@ Please open an issue first to discuss changes before submitting a PR.
 
 📄 License
 
-Licensed under the GPL-3.0 License
+Licensed under the MIT License
 
 ---
 
