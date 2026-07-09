@@ -103,7 +103,7 @@ Please open an issue first to discuss changes before submitting a PR.
 
 📄 License
 
-Licensed under the GPL-3.0 License
+Licensed under the MIT License
 
 ---
 
