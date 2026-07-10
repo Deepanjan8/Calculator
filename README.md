@@ -1,8 +1,8 @@
 <img src="app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" width="40" align="center"> N Calculator
 
 <p align="left">
-  <img src="https://img.shields.io/badge/License-GPL--3.0-blue.svg" alt="License">
-  <img src="https://img.shields.io/badge/Version-1.0.0-orange.svg" alt="Version">
+<img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
+  <img src="https://img.shields.io/badge/Version-1.0.3-orange.svg" alt="Version">
   <img src="https://img.shields.io/badge/UI-Glassmorphism-pink.svg" alt="Design">
   <img src="https://img.shields.io/badge/Language-Kotlin-7F52FF.svg" alt="Language">
 </p>
@@ -107,9 +107,8 @@ pkg install git openjdk-17
 ```
 **Step 2: Clone the Repository & Enter Folder**
 ```bash
-git clone [https://github.com/Deepanjan008/Calculator.git](https://github.com/Deepanjan008/Calculator.git)
 cd Calculator
-
+git clone https://github.com/Deepanjan008/Calculator.git
 ```
 **Step 3: Setup Android SDK**
 *(Ensure Android command-line tools are downloaded and $ANDROID_HOME is properly configured in your Termux environment).*
