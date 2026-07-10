@@ -2,7 +2,7 @@
 
 <p align="left">
 <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License">
-  <img src="https://img.shields.io/badge/Version-1.0.3-orange.svg" alt="Version">
+  <img src="https://img.shields.io/badge/Version-1.0.4-orange.svg" alt="Version">
   <img src="https://img.shields.io/badge/UI-Glassmorphism-pink.svg" alt="Design">
   <img src="https://img.shields.io/badge/Language-Kotlin-7F52FF.svg" alt="Language">
 </p>
@@ -76,10 +76,10 @@ Just fast, reliable tools that work entirely on your device.
 ---
 
 ## 🛠️ Tech Stack
-- **Language:** Kotlin (2.3.10+)
-- **UI:** Jetpack Compose (1.10.4+) + Material 3 Adaptive Layouts
+- **Language:** Kotlin (1.9.22)
+- **UI:** Jetpack Compose (BOM 2024.04.01) + Material 3
 - **Architecture:** Modular + Clean Architecture (:app, :core, :features)
-- **Build System:** Gradle (9.3.1+) & AGP (9.0.1+)
+- **Build System:** Gradle (8.x) & AGP (8.x)
 
 ---
 
