@@ -1,7 +1,6 @@
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
-    id("kotlin-kapt")
+    id("com.google.devtools.ksp")
     id("com.google.dagger.hilt.android")
 }
 
@@ -35,18 +34,8 @@ android {
             signingConfig = signingConfigs.getByName("release")
         }
     }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_17
-        targetCompatibility = JavaVersion.VERSION_17
-    }
-    kotlinOptions {
-        jvmTarget = "17"
-    }
     buildFeatures {
         compose = true
-    }
-    composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.8"
     }
     
     // Izzy-র কথামতো dependenciesInfo ব্লকটি মূল android ব্লকের ভেতরে আনা হয়েছে
@@ -73,13 +62,13 @@ dependencies {
     // Extended Icons (আগের ফিক্স)
     implementation("androidx.compose.material:material-icons-extended")
 
-    // FIX: Hilt & Dagger Updated to 2.51.1 (Fixes 'dagger.internal.Provider' error)
-    implementation("com.google.dagger:hilt-android:2.51.1")
-    kapt("com.google.dagger:hilt-android-compiler:2.51.1")
+    // FIX: Hilt & Dagger Updated to 2.55.0 (Fixes 'dagger.internal.Provider' error)
+    implementation("com.google.dagger:hilt-android:2.55.0")
+    ksp("com.google.dagger:hilt-android-compiler:2.55.0")
     implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
 
     // Dagger Core (Explicitly added to prevent missing class error)
-    implementation("com.google.dagger:dagger:2.51.1")
+    implementation("com.google.dagger:dagger:2.55.0")
 
     // DataStore & Navigation
     implementation("androidx.datastore:datastore-preferences:1.0.0")
@@ -89,7 +78,7 @@ dependencies {
     val roomVersion = "2.6.1"
     implementation("androidx.room:room-runtime:$roomVersion")
     implementation("androidx.room:room-ktx:$roomVersion")
-    kapt("androidx.room:room-compiler:$roomVersion")
+    ksp("androidx.room:room-compiler:$roomVersion")
 
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
@@ -100,3 +89,7 @@ dependencies {
     debugImplementation("androidx.compose.ui:ui-test-manifest")
 }
 
+
+kotlin {
+    jvmToolchain(17)
+}
