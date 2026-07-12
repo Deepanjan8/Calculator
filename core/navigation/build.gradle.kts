@@ -3,5 +3,5 @@ plugins {
 }
 
 dependencies {
-    implementation(libs.androidx.navigation.compose)
+    implementation(libs.findLibrary("androidx-navigation-compose").get())
 }

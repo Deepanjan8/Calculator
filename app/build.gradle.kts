@@ -33,13 +33,13 @@ dependencies {
     implementation(project(":feature:history"))
     implementation(project(":feature:settings"))
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.lifecycle.runtime.ktx)
-    implementation(libs.androidx.activity.compose)
-    implementation(libs.androidx.navigation.compose)
+    implementation(libs.findLibrary("androidx-core-ktx").get())
+    implementation(libs.findLibrary("androidx-lifecycle-runtime-ktx").get())
+    implementation(libs.findLibrary("androidx-activity-compose").get())
+    implementation(libs.findLibrary("androidx-navigation-compose").get())
 
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.test.ext.junit)
-    androidTestImplementation(libs.androidx.test.espresso.core)
-    androidTestImplementation(libs.androidx.compose.ui.test.junit4)
+    testImplementation(libs.findLibrary("junit").get())
+    androidTestImplementation(libs.findLibrary("androidx-test-ext-junit").get())
+    androidTestImplementation(libs.findLibrary("androidx-test-espresso-core").get())
+    androidTestImplementation(libs.findLibrary("androidx-compose-ui-test-junit4").get())
 }

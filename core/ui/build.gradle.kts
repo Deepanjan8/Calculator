@@ -3,5 +3,5 @@ plugins {
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
+    implementation(libs.findLibrary("androidx-core-ktx").get())
 }
