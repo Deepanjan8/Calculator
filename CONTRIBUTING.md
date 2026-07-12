@@ -1,4 +1,4 @@
-# Contributing to Neo Calculator
+# Contributing to N Calculator
 
 First off, thank you for considering contributing to Neo Calculator! It's people like you who make this tool better for everyone.
 
