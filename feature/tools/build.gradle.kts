@@ -6,8 +6,8 @@ plugins {
 dependencies {
     implementation(project(":core:navigation"))
 
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.navigation.compose)
-    implementation(libs.hilt.navigation.compose)
-    implementation(libs.androidx.compose.material.icons.extended)
+    implementation(libs.findLibrary("androidx-core-ktx").get())
+    implementation(libs.findLibrary("androidx-navigation-compose").get())
+    implementation(libs.findLibrary("hilt-navigation-compose").get())
+    implementation(libs.findLibrary("androidx-compose-material-icons-extended").get())
 }

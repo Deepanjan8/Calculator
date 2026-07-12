@@ -4,11 +4,11 @@ plugins {
 }
 
 dependencies {
-    implementation(libs.androidx.core.ktx)
+    implementation(libs.findLibrary("androidx-core-ktx").get())
 
-    implementation(libs.androidx.room.runtime)
-    implementation(libs.androidx.room.ktx)
-    ksp(libs.androidx.room.compiler)
+    implementation(libs.findLibrary("androidx-room-runtime").get())
+    implementation(libs.findLibrary("androidx-room-ktx").get())
+    ksp(libs.findLibrary("androidx-room-compiler").get())
 
-    implementation(libs.androidx.datastore.preferences)
+    implementation(libs.findLibrary("androidx-datastore-preferences").get())
 }
