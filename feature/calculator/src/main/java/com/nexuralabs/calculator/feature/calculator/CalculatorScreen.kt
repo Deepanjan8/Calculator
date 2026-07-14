@@ -232,7 +232,12 @@ private fun DisplaySection(
 private fun handleButtonClick(btn: KeypadButton, hapticEnabled: Boolean, context: Context, viewModel: CalculatorViewModel) {
     if (hapticEnabled) {
         val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator
-        vibrator?.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK))
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
+            vibrator?.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK))
+        } else {
+            @Suppress("DEPRECATION")
+            vibrator?.vibrate(10)
+        }
     }
     viewModel.onButtonClick(btn.command)
 }
