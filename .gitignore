@@ -31,3 +31,5 @@ b64_key.txt
 # Generated Artifacts and APKs
 *.apk
 *-Signed/
+**/build/
+.gradle/
