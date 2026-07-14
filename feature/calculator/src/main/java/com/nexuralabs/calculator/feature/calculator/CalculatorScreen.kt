@@ -228,6 +228,7 @@ private fun DisplaySection(
     )
 }
 
+@android.annotation.SuppressLint("MissingPermission")
 private fun handleButtonClick(btn: KeypadButton, hapticEnabled: Boolean, context: Context, viewModel: CalculatorViewModel) {
     if (hapticEnabled) {
         val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator
