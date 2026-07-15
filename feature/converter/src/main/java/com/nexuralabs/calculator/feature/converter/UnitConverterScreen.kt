@@ -22,34 +22,65 @@ import com.nexuralabs.calculator.core.navigation.NexuraRoutes
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun UnitConverterScreen(navController: NavController) {
-    // Unified 2-column grid layout configuration matching Pro Tools design system
-    Scaffold(
-        topBar = {
-            CenterAlignedTopAppBar(title = { Text("Unit Converter", fontWeight = FontWeight.Bold) })
-        }
-    ) { padding ->
-        LazyVerticalGrid(
-            columns = GridCells.Fixed(2),
-            contentPadding = PaddingValues(16.dp),
-            verticalArrangement = Arrangement.spacedBy(16.dp),
-            horizontalArrangement = Arrangement.spacedBy(16.dp),
-            modifier = Modifier.padding(padding).fillMaxSize()
-        ) {
-            items(converterCategories, key = { it.name }) { category ->
-                Card(
-                    onClick = { navController.navigate(NexuraRoutes.converterDetail(category.name)) },
-                    modifier = Modifier.aspectRatio(1f),
-                    shape = RoundedCornerShape(28.dp),
-                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer)
-                ) {
-                    Column(
-                        modifier = Modifier.fillMaxSize().padding(12.dp),
-                        horizontalAlignment = Alignment.CenterHorizontally,
-                        verticalArrangement = Arrangement.Center
+    val sheetState = rememberModalBottomSheetState(skipPartiallyExpanded = true)
+
+    ModalBottomSheet(
+        onDismissRequest = { navController.popBackStack() },
+        sheetState = sheetState,
+        shape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp)
+    ) {
+        Column(modifier = Modifier.fillMaxSize()) {
+            Row(
+                modifier = Modifier.fillMaxWidth().padding(20.dp),
+                verticalAlignment = Alignment.CenterVertically,
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                Text(
+                    text = "Unit Converter",
+                    style = MaterialTheme.typography.headlineMedium,
+                    fontWeight = FontWeight.Bold
+                )
+                IconButton(onClick = { navController.popBackStack() }) {
+                    Icon(Icons.Default.Close, contentDescription = "Close")
+                }
+            }
+            HorizontalDivider()
+            LazyVerticalGrid(
+                columns = GridCells.Fixed(2),
+                contentPadding = PaddingValues(16.dp),
+                verticalArrangement = Arrangement.spacedBy(16.dp),
+                horizontalArrangement = Arrangement.spacedBy(16.dp),
+                modifier = Modifier.fillMaxSize()
+            ) {
+                items(converterCategories, key = { it.name }) { category ->
+                    Card(
+                        onClick = {
+                            navController.popBackStack()
+                            navController.navigate(NexuraRoutes.converterDetail(category.name))
+                        },
+                        modifier = Modifier.aspectRatio(1f),
+                        shape = RoundedCornerShape(28.dp),
+                        colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer)
                     ) {
-                        Icon(imageVector = category.icon, contentDescription = category.name, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(44.dp))
-                        Spacer(Modifier.height(8.dp))
-                        Text(text = category.name, style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
+                        Column(
+                            modifier = Modifier.fillMaxSize().padding(12.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                            verticalArrangement = Arrangement.Center
+                        ) {
+                            Icon(
+                                imageVector = category.icon,
+                                contentDescription = category.name,
+                                tint = MaterialTheme.colorScheme.primary,
+                                modifier = Modifier.size(44.dp)
+                            )
+                            Spacer(Modifier.height(8.dp))
+                            Text(
+                                text = category.name,
+                                style = MaterialTheme.typography.titleSmall,
+                                fontWeight = FontWeight.Bold,
+                                textAlign = TextAlign.Center
+                            )
+                        }
                     }
                 }
             }
