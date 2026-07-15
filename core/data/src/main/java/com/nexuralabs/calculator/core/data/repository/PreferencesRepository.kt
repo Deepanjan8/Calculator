@@ -6,8 +6,10 @@ import androidx.datastore.preferences.core.booleanPreferencesKey
 import androidx.datastore.preferences.core.edit
 import androidx.datastore.preferences.core.intPreferencesKey
 import androidx.datastore.preferences.core.stringPreferencesKey
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
+import kotlinx.coroutines.withContext
 import javax.inject.Inject
 
 class PreferencesRepository @Inject constructor(
@@ -25,19 +27,19 @@ class PreferencesRepository @Inject constructor(
     val themeMode: Flow<String> = dataStore.data.map { it[Keys.THEME_MODE] ?: "system" }
     val themeColorHex: Flow<String> = dataStore.data.map { it[Keys.THEME_COLOR] ?: "#BB86FC" }
 
-    suspend fun setPrecision(value: Int) {
+    suspend fun setPrecision(value: Int) = withContext(Dispatchers.IO) {
         dataStore.edit { it[Keys.PRECISION] = value }
     }
 
-    suspend fun setHapticEnabled(value: Boolean) {
+    suspend fun setHapticEnabled(value: Boolean) = withContext(Dispatchers.IO) {
         dataStore.edit { it[Keys.HAPTIC] = value }
     }
 
-    suspend fun setThemeMode(value: String) {
+    suspend fun setThemeMode(value: String) = withContext(Dispatchers.IO) {
         dataStore.edit { it[Keys.THEME_MODE] = value }
     }
 
-    suspend fun setThemeColorHex(value: String) {
+    suspend fun setThemeColorHex(value: String) = withContext(Dispatchers.IO) {
         dataStore.edit { it[Keys.THEME_COLOR] = value }
     }
 }

@@ -1,0 +1,893 @@
+build	Set up job	﻿2026-07-15T00:47:10.5522019Z Current runner version: '2.335.1'
+build	Set up job	2026-07-15T00:47:10.5547324Z ##[group]Runner Image Provisioner
+build	Set up job	2026-07-15T00:47:10.5548216Z Hosted Compute Agent
+build	Set up job	2026-07-15T00:47:10.5548917Z Version: 20260624.560
+build	Set up job	2026-07-15T00:47:10.5549553Z Commit: 925d229a51159bc391ae97e54a2dd1fe20af789d
+build	Set up job	2026-07-15T00:47:10.5550806Z Build Date: 2026-06-24T18:26:47Z
+build	Set up job	2026-07-15T00:47:10.5551691Z Worker ID: {c6602769-82e0-42bb-a881-cdf65ae995b9}
+build	Set up job	2026-07-15T00:47:10.5552417Z Azure Region: eastus
+build	Set up job	2026-07-15T00:47:10.5553040Z ##[endgroup]
+build	Set up job	2026-07-15T00:47:10.5554732Z ##[group]Operating System
+build	Set up job	2026-07-15T00:47:10.5555361Z Ubuntu
+build	Set up job	2026-07-15T00:47:10.5555971Z 24.04.4
+build	Set up job	2026-07-15T00:47:10.5556484Z LTS
+build	Set up job	2026-07-15T00:47:10.5557022Z ##[endgroup]
+build	Set up job	2026-07-15T00:47:10.5557619Z ##[group]Runner Image
+build	Set up job	2026-07-15T00:47:10.5558204Z Image: ubuntu-24.04
+build	Set up job	2026-07-15T00:47:10.5558816Z Version: 20260705.232.1
+build	Set up job	2026-07-15T00:47:10.5560105Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260705.232/images/ubuntu/Ubuntu2404-Readme.md
+build	Set up job	2026-07-15T00:47:10.5561906Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260705.232
+build	Set up job	2026-07-15T00:47:10.5562876Z ##[endgroup]
+build	Set up job	2026-07-15T00:47:10.5564084Z ##[group]GITHUB_TOKEN Permissions
+build	Set up job	2026-07-15T00:47:10.5565939Z Contents: read
+build	Set up job	2026-07-15T00:47:10.5567075Z Metadata: read
+build	Set up job	2026-07-15T00:47:10.5567646Z Packages: read
+build	Set up job	2026-07-15T00:47:10.5568172Z ##[endgroup]
+build	Set up job	2026-07-15T00:47:10.5570612Z Secret source: Actions
+build	Set up job	2026-07-15T00:47:10.5571659Z Prepare workflow directory
+build	Set up job	2026-07-15T00:47:10.5903430Z Prepare all required actions
+build	Set up job	2026-07-15T00:47:10.5941474Z Getting action download info
+build	Set up job	2026-07-15T00:47:10.7789305Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+build	Set up job	2026-07-15T00:47:10.8561306Z Download action repository 'actions/setup-java@v4' (SHA:c1e323688fd81a25caa38c78aa6df2d33d3e20d9)
+build	Set up job	2026-07-15T00:47:11.2121214Z Complete job name: build
+build	Checkout Code	﻿2026-07-15T00:47:11.2861874Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+build	Checkout Code	2026-07-15T00:47:11.2871093Z ##[group]Run actions/checkout@v4
+build	Checkout Code	2026-07-15T00:47:11.2871848Z with:
+build	Checkout Code	2026-07-15T00:47:11.2872299Z   repository: Deepanjan8/Calculator
+build	Checkout Code	2026-07-15T00:47:11.2876262Z   token: ***
+build	Checkout Code	2026-07-15T00:47:11.2876693Z   ssh-strict: true
+build	Checkout Code	2026-07-15T00:47:11.2877125Z   ssh-user: git
+build	Checkout Code	2026-07-15T00:47:11.2877564Z   persist-credentials: true
+build	Checkout Code	2026-07-15T00:47:11.2878038Z   clean: true
+build	Checkout Code	2026-07-15T00:47:11.2878469Z   sparse-checkout-cone-mode: true
+build	Checkout Code	2026-07-15T00:47:11.2878977Z   fetch-depth: 1
+build	Checkout Code	2026-07-15T00:47:11.2879399Z   fetch-tags: false
+build	Checkout Code	2026-07-15T00:47:11.2880043Z   show-progress: true
+build	Checkout Code	2026-07-15T00:47:11.2880491Z   lfs: false
+build	Checkout Code	2026-07-15T00:47:11.2880901Z   submodules: false
+build	Checkout Code	2026-07-15T00:47:11.2881387Z   set-safe-directory: true
+build	Checkout Code	2026-07-15T00:47:11.2882118Z ##[endgroup]
+build	Checkout Code	2026-07-15T00:47:11.3895740Z Syncing repository: Deepanjan8/Calculator
+build	Checkout Code	2026-07-15T00:47:11.3898577Z ##[group]Getting Git version info
+build	Checkout Code	2026-07-15T00:47:11.3900105Z Working directory is '/home/runner/work/Calculator/Calculator'
+build	Checkout Code	2026-07-15T00:47:11.3901826Z [command]/usr/bin/git version
+build	Checkout Code	2026-07-15T00:47:11.3956861Z git version 2.54.0
+build	Checkout Code	2026-07-15T00:47:11.3980238Z ##[endgroup]
+build	Checkout Code	2026-07-15T00:47:11.3996450Z Temporarily overriding HOME='/home/runner/work/_temp/3a339b1e-46b1-4f14-a45c-51145edd8254' before making global git config changes
+build	Checkout Code	2026-07-15T00:47:11.3999162Z Adding repository directory to the temporary git global config as a safe directory
+build	Checkout Code	2026-07-15T00:47:11.4002162Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Calculator/Calculator
+build	Checkout Code	2026-07-15T00:47:11.4057837Z Deleting the contents of '/home/runner/work/Calculator/Calculator'
+build	Checkout Code	2026-07-15T00:47:11.4064043Z ##[group]Initializing the repository
+build	Checkout Code	2026-07-15T00:47:11.4069476Z [command]/usr/bin/git init /home/runner/work/Calculator/Calculator
+build	Checkout Code	2026-07-15T00:47:11.4160910Z hint: Using 'master' as the name for the initial branch. This default branch name
+build	Checkout Code	2026-07-15T00:47:11.4162205Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+build	Checkout Code	2026-07-15T00:47:11.4163161Z hint: to use in all of your new repositories, which will suppress this warning,
+build	Checkout Code	2026-07-15T00:47:11.4163908Z hint: call:
+build	Checkout Code	2026-07-15T00:47:11.4164956Z hint:
+build	Checkout Code	2026-07-15T00:47:11.4165924Z hint: 	git config --global init.defaultBranch <name>
+build	Checkout Code	2026-07-15T00:47:11.4167035Z hint:
+build	Checkout Code	2026-07-15T00:47:11.4168088Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+build	Checkout Code	2026-07-15T00:47:11.4169785Z hint: 'development'. The just-created branch can be renamed via this command:
+build	Checkout Code	2026-07-15T00:47:11.4171434Z hint:
+build	Checkout Code	2026-07-15T00:47:11.4172191Z hint: 	git branch -m <name>
+build	Checkout Code	2026-07-15T00:47:11.4173039Z hint:
+build	Checkout Code	2026-07-15T00:47:11.4174150Z hint: Disable this message with "git config set advice.defaultBranchName false"
+build	Checkout Code	2026-07-15T00:47:11.4175970Z Initialized empty Git repository in /home/runner/work/Calculator/Calculator/.git/
+build	Checkout Code	2026-07-15T00:47:11.4181441Z [command]/usr/bin/git remote add origin https://github.com/Deepanjan8/Calculator
+build	Checkout Code	2026-07-15T00:47:11.4231130Z ##[endgroup]
+build	Checkout Code	2026-07-15T00:47:11.4232436Z ##[group]Disabling automatic garbage collection
+build	Checkout Code	2026-07-15T00:47:11.4236244Z [command]/usr/bin/git config --local gc.auto 0
+build	Checkout Code	2026-07-15T00:47:11.4269583Z ##[endgroup]
+build	Checkout Code	2026-07-15T00:47:11.4271252Z ##[group]Setting up auth
+build	Checkout Code	2026-07-15T00:47:11.4278131Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	Checkout Code	2026-07-15T00:47:11.4315940Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	Checkout Code	2026-07-15T00:47:11.4683758Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	Checkout Code	2026-07-15T00:47:11.4725477Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	Checkout Code	2026-07-15T00:47:11.4977812Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	Checkout Code	2026-07-15T00:47:11.5017140Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	Checkout Code	2026-07-15T00:47:11.5286441Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+build	Checkout Code	2026-07-15T00:47:11.5326461Z ##[endgroup]
+build	Checkout Code	2026-07-15T00:47:11.5327798Z ##[group]Fetching the repository
+build	Checkout Code	2026-07-15T00:47:11.5338934Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +9c643c1f906ca963c7e84831cb5771071ab88782:refs/remotes/origin/main
+build	Checkout Code	2026-07-15T00:47:11.7390965Z From https://github.com/Deepanjan8/Calculator
+build	Checkout Code	2026-07-15T00:47:11.7392474Z  * [new ref]         9c643c1f906ca963c7e84831cb5771071ab88782 -> origin/main
+build	Checkout Code	2026-07-15T00:47:11.7425520Z ##[endgroup]
+build	Checkout Code	2026-07-15T00:47:11.7426717Z ##[group]Determining the checkout info
+build	Checkout Code	2026-07-15T00:47:11.7428046Z ##[endgroup]
+build	Checkout Code	2026-07-15T00:47:11.7434562Z [command]/usr/bin/git sparse-checkout disable
+build	Checkout Code	2026-07-15T00:47:11.7482870Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+build	Checkout Code	2026-07-15T00:47:11.7513109Z ##[group]Checking out the ref
+build	Checkout Code	2026-07-15T00:47:11.7517866Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+build	Checkout Code	2026-07-15T00:47:11.7684477Z Switched to a new branch 'main'
+build	Checkout Code	2026-07-15T00:47:11.7688255Z branch 'main' set up to track 'origin/main'.
+build	Checkout Code	2026-07-15T00:47:11.7695079Z ##[endgroup]
+build	Checkout Code	2026-07-15T00:47:11.7740243Z [command]/usr/bin/git log -1 --format=%H
+build	Checkout Code	2026-07-15T00:47:11.7766881Z 9c643c1f906ca963c7e84831cb5771071ab88782
+build	Set up JDK 21	﻿2026-07-15T00:47:11.8063398Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+build	Set up JDK 21	2026-07-15T00:47:11.8066213Z ##[group]Run actions/setup-java@v4
+build	Set up JDK 21	2026-07-15T00:47:11.8066729Z with:
+build	Set up JDK 21	2026-07-15T00:47:11.8067125Z   java-version: 21
+build	Set up JDK 21	2026-07-15T00:47:11.8067548Z   distribution: temurin
+build	Set up JDK 21	2026-07-15T00:47:11.8067989Z   cache: gradle
+build	Set up JDK 21	2026-07-15T00:47:11.8068403Z   java-package: jdk
+build	Set up JDK 21	2026-07-15T00:47:11.8068831Z   check-latest: false
+build	Set up JDK 21	2026-07-15T00:47:11.8069258Z   server-id: github
+build	Set up JDK 21	2026-07-15T00:47:11.8069696Z   server-username: GITHUB_ACTOR
+build	Set up JDK 21	2026-07-15T00:47:11.8070380Z   server-password: GITHUB_TOKEN
+build	Set up JDK 21	2026-07-15T00:47:11.8070894Z   overwrite-settings: true
+build	Set up JDK 21	2026-07-15T00:47:11.8071357Z   job-status: success
+build	Set up JDK 21	2026-07-15T00:47:11.8075220Z   token: ***
+build	Set up JDK 21	2026-07-15T00:47:11.8075629Z ##[endgroup]
+build	Set up JDK 21	2026-07-15T00:47:11.9670125Z ##[group]Installed distributions
+build	Set up JDK 21	2026-07-15T00:47:11.9734312Z Resolved Java 21.0.11+10 from tool-cache
+build	Set up JDK 21	2026-07-15T00:47:11.9735257Z Setting Java 21.0.11+10 as the default
+build	Set up JDK 21	2026-07-15T00:47:11.9745271Z (node:2256) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build	Set up JDK 21	2026-07-15T00:47:11.9746499Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build	Set up JDK 21	2026-07-15T00:47:11.9749539Z Creating toolchains.xml for JDK version 21 from temurin
+build	Set up JDK 21	2026-07-15T00:47:11.9827081Z Writing to /home/runner/.m2/toolchains.xml
+build	Set up JDK 21	2026-07-15T00:47:11.9829129Z 
+build	Set up JDK 21	2026-07-15T00:47:11.9829570Z Java configuration:
+build	Set up JDK 21	2026-07-15T00:47:11.9830495Z   Distribution: temurin
+build	Set up JDK 21	2026-07-15T00:47:11.9831032Z   Version: 21.0.11+10
+build	Set up JDK 21	2026-07-15T00:47:11.9832013Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.11-10/x64
+build	Set up JDK 21	2026-07-15T00:47:11.9832659Z 
+build	Set up JDK 21	2026-07-15T00:47:11.9833285Z ##[endgroup]
+build	Set up JDK 21	2026-07-15T00:47:11.9847805Z Creating settings.xml with server-id: github
+build	Set up JDK 21	2026-07-15T00:47:11.9866070Z Writing to /home/runner/.m2/settings.xml
+build	Set up JDK 21	2026-07-15T00:47:12.1553480Z gradle cache is not found
+build	Grant execute permission for gradlew	﻿2026-07-15T00:47:12.1856117Z ##[group]Run chmod +x gradlew
+build	Grant execute permission for gradlew	2026-07-15T00:47:12.1857020Z ^[[36;1mchmod +x gradlew^[[0m
+build	Grant execute permission for gradlew	2026-07-15T00:47:12.2936312Z shell: /usr/bin/bash -e {0}
+build	Grant execute permission for gradlew	2026-07-15T00:47:12.2937093Z env:
+build	Grant execute permission for gradlew	2026-07-15T00:47:12.2938013Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.11-10/x64
+build	Grant execute permission for gradlew	2026-07-15T00:47:12.2940082Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.11-10/x64
+build	Grant execute permission for gradlew	2026-07-15T00:47:12.2941443Z ##[endgroup]
+build	Build Debug APK and Run Checks	﻿2026-07-15T00:47:12.3108406Z ##[group]Run ./gradlew assembleDebug check --parallel --build-cache --configuration-cache
+build	Build Debug APK and Run Checks	2026-07-15T00:47:12.3110807Z ^[[36;1m./gradlew assembleDebug check --parallel --build-cache --configuration-cache^[[0m
+build	Build Debug APK and Run Checks	2026-07-15T00:47:12.3145377Z shell: /usr/bin/bash -e {0}
+build	Build Debug APK and Run Checks	2026-07-15T00:47:12.3146037Z env:
+build	Build Debug APK and Run Checks	2026-07-15T00:47:12.3146897Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.11-10/x64
+build	Build Debug APK and Run Checks	2026-07-15T00:47:12.3148594Z   JAVA_HOME_21_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/21.0.11-10/x64
+build	Build Debug APK and Run Checks	2026-07-15T00:47:12.3150085Z ##[endgroup]
+build	Build Debug APK and Run Checks	2026-07-15T00:47:14.1644690Z Downloading https://services.gradle.org/distributions/gradle-9.3.1-bin.zip
+build	Build Debug APK and Run Checks	2026-07-15T00:47:16.7501297Z .............10%.............20%.............30%.............40%.............50%.............60%.............70%.............80%.............90%.............100%
+build	Build Debug APK and Run Checks	2026-07-15T00:47:18.1510728Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:47:18.1511991Z Welcome to Gradle 9.3.1!
+build	Build Debug APK and Run Checks	2026-07-15T00:47:18.1512873Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:47:18.1513501Z Here are the highlights of this release:
+build	Build Debug APK and Run Checks	2026-07-15T00:47:18.1514450Z  - Test reporting improvements
+build	Build Debug APK and Run Checks	2026-07-15T00:47:18.1515265Z  - Error and warning improvements
+build	Build Debug APK and Run Checks	2026-07-15T00:47:18.1516024Z  - Build authoring improvements
+build	Build Debug APK and Run Checks	2026-07-15T00:47:18.1516585Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:47:18.1517106Z For more details see https://docs.gradle.org/9.3.1/release-notes.html
+build	Build Debug APK and Run Checks	2026-07-15T00:47:18.1517825Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:47:18.2504278Z Starting a Gradle Daemon (subsequent builds will be faster)
+build	Build Debug APK and Run Checks	2026-07-15T00:47:21.3513630Z Calculating task graph as no cached configuration is available for tasks: assembleDebug check
+build	Build Debug APK and Run Checks	2026-07-15T00:48:13.7525871Z > Task :build-logic:convention:checkKotlinGradlePluginConfigurationErrors SKIPPED
+build	Build Debug APK and Run Checks	2026-07-15T00:48:21.8512991Z > Task :build-logic:convention:pluginDescriptors
+build	Build Debug APK and Run Checks	2026-07-15T00:48:21.8517945Z > Task :build-logic:convention:processResources
+build	Build Debug APK and Run Checks	2026-07-15T00:48:28.1504244Z > Task :build-logic:convention:compileKotlin
+build	Build Debug APK and Run Checks	2026-07-15T00:48:28.1532051Z > Task :build-logic:convention:compileJava NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:48:28.1561570Z > Task :build-logic:convention:classes
+build	Build Debug APK and Run Checks	2026-07-15T00:48:28.1592296Z > Task :build-logic:convention:jar
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.7532296Z > Task :core:navigation:preBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.7533504Z > Task :app:preBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.7534306Z > Task :core:navigation:preDebugBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.7538130Z > Task :app:preDebugBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.7538999Z > Task :core:data:preBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.7540247Z > Task :core:ui:preBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.7541011Z > Task :core:data:preDebugBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.7541911Z > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.7542738Z > Task :core:ui:preDebugBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9531278Z > Task :core:navigation:processDebugNavigationResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9560754Z > Task :feature:calculator:preBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9590541Z > Task :feature:calculator:preDebugBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9591507Z > Task :app:generateDebugResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9592318Z > Task :core:ui:processDebugNavigationResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9593131Z > Task :feature:converter:preBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9593949Z > Task :feature:converter:preDebugBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9610456Z > Task :core:data:processDebugNavigationResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9643196Z > Task :feature:finance:preBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9654735Z > Task :feature:finance:preDebugBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9690678Z > Task :feature:finance:processDebugNavigationResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9710902Z > Task :feature:history:preBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9711592Z > Task :feature:history:preDebugBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9712313Z > Task :feature:calculator:processDebugNavigationResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9713300Z > Task :feature:settings:preBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9714026Z > Task :feature:settings:preDebugBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9714827Z > Task :feature:converter:processDebugNavigationResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9716016Z > Task :feature:tools:preBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9716740Z > Task :feature:tools:preDebugBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9717629Z > Task :feature:history:processDebugNavigationResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9718719Z > Task :feature:settings:processDebugNavigationResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9722731Z > Task :feature:tools:processDebugNavigationResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:13.9723716Z > Task :core:data:generateDebugResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:14.0521071Z > Task :core:data:packageDebugResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:14.1504334Z > Task :app:packageDebugResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:14.1505561Z > Task :core:navigation:generateDebugResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:14.8521321Z > Task :core:navigation:packageDebugResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:15.3510924Z > Task :core:navigation:parseDebugLocalResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:15.4536009Z > Task :core:data:javaPreCompileDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:49:15.4560937Z > Task :core:data:parseDebugLocalResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:15.4630714Z > Task :core:data:generateDebugRFile
+build	Build Debug APK and Run Checks	2026-07-15T00:49:16.7530731Z > Task :core:navigation:javaPreCompileDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:49:16.7560474Z > Task :core:navigation:generateDebugRFile
+build	Build Debug APK and Run Checks	2026-07-15T00:49:16.7590406Z > Task :core:ui:generateDebugResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:16.7620319Z > Task :core:ui:packageDebugResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:16.7650615Z > Task :core:ui:parseDebugLocalResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:17.6503701Z > Task :core:ui:generateDebugRFile
+build	Build Debug APK and Run Checks	2026-07-15T00:49:17.9520793Z > Task :app:processDebugNavigationResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:18.0525255Z > Task :app:parseDebugLocalResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:18.1505085Z > Task :app:generateDebugRFile
+build	Build Debug APK and Run Checks	2026-07-15T00:49:18.1530616Z > Task :core:ui:javaPreCompileDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:18.1560686Z > Task :feature:calculator:generateDebugResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:18.1620504Z > Task :feature:calculator:packageDebugResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:18.1640469Z > Task :feature:calculator:parseDebugLocalResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.3520738Z > Task :feature:calculator:generateDebugRFile
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.6520790Z > Task :feature:calculator:javaPreCompileDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.6580750Z > Task :feature:converter:generateDebugResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.6620786Z > Task :feature:converter:packageDebugResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.6670579Z > Task :feature:converter:parseDebugLocalResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.6696794Z > Task :feature:converter:generateDebugRFile
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.6750809Z > Task :feature:converter:javaPreCompileDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.7530893Z > Task :feature:finance:generateDebugResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.7580447Z > Task :feature:finance:packageDebugResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.7620439Z > Task :feature:finance:parseDebugLocalResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.7662534Z > Task :feature:finance:generateDebugRFile
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.7671001Z > Task :feature:finance:javaPreCompileDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.7730695Z > Task :feature:history:generateDebugResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.8531042Z > Task :feature:history:packageDebugResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.8582728Z > Task :feature:history:parseDebugLocalResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.8640694Z > Task :feature:history:generateDebugRFile
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.8710747Z > Task :feature:history:javaPreCompileDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.8720767Z > Task :feature:settings:generateDebugResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.8750583Z > Task :feature:settings:packageDebugResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.8780572Z > Task :feature:settings:parseDebugLocalResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.9521055Z > Task :feature:settings:generateDebugRFile
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.9521922Z > Task :feature:settings:javaPreCompileDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.9522529Z > Task :feature:tools:generateDebugResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.9523056Z > Task :feature:tools:packageDebugResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.9550595Z > Task :feature:tools:parseDebugLocalResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.9600417Z > Task :feature:tools:generateDebugRFile
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.9608404Z > Task :feature:tools:javaPreCompileDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.9630399Z > Task :app:javaPreCompileDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.9643232Z > Task :app:generateDebugAssets UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:19.9700639Z > Task :core:data:generateDebugAssets UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:20.0513381Z > Task :core:data:mergeDebugAssets
+build	Build Debug APK and Run Checks	2026-07-15T00:49:20.0570993Z > Task :core:navigation:generateDebugAssets UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:20.0591003Z > Task :core:navigation:mergeDebugAssets
+build	Build Debug APK and Run Checks	2026-07-15T00:49:20.0630978Z > Task :core:ui:generateDebugAssets UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:20.0635299Z > Task :core:ui:mergeDebugAssets
+build	Build Debug APK and Run Checks	2026-07-15T00:49:20.0635871Z > Task :feature:calculator:generateDebugAssets UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:20.0636767Z > Task :feature:calculator:mergeDebugAssets
+build	Build Debug APK and Run Checks	2026-07-15T00:49:20.0637372Z > Task :feature:converter:generateDebugAssets UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:20.0638022Z > Task :feature:converter:mergeDebugAssets
+build	Build Debug APK and Run Checks	2026-07-15T00:49:20.0647899Z > Task :feature:finance:generateDebugAssets UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:20.0648545Z > Task :feature:finance:mergeDebugAssets
+build	Build Debug APK and Run Checks	2026-07-15T00:49:20.0649249Z > Task :feature:history:generateDebugAssets UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:20.0650667Z > Task :feature:history:mergeDebugAssets
+build	Build Debug APK and Run Checks	2026-07-15T00:49:20.0651504Z > Task :feature:settings:generateDebugAssets UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:22.9510694Z > Task :feature:settings:mergeDebugAssets
+build	Build Debug APK and Run Checks	2026-07-15T00:49:22.9540645Z > Task :feature:tools:generateDebugAssets UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:22.9560432Z > Task :feature:tools:mergeDebugAssets
+build	Build Debug APK and Run Checks	2026-07-15T00:49:23.2513594Z > Task :app:mergeDebugAssets
+build	Build Debug APK and Run Checks	2026-07-15T00:49:23.2544455Z > Task :app:compressDebugAssets
+build	Build Debug APK and Run Checks	2026-07-15T00:49:23.2570962Z > Task :app:desugarDebugFileDependencies
+build	Build Debug APK and Run Checks	2026-07-15T00:49:23.2592728Z > Task :core:data:writeDebugAarMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:49:23.2618082Z > Task :core:navigation:writeDebugAarMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:49:23.3570912Z > Task :core:ui:writeDebugAarMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:49:23.3599523Z > Task :feature:calculator:writeDebugAarMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:49:23.3600586Z > Task :feature:converter:writeDebugAarMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:49:23.3624577Z > Task :feature:finance:writeDebugAarMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:49:23.3650421Z > Task :feature:history:writeDebugAarMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:49:23.3680783Z > Task :feature:settings:writeDebugAarMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:49:23.3681609Z > Task :feature:tools:writeDebugAarMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:49:23.5521344Z > Task :app:checkDebugAarMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:49:23.7504863Z > Task :app:compileDebugNavigationResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:23.9503252Z > Task :app:mapDebugSourceSetPaths
+build	Build Debug APK and Run Checks	2026-07-15T00:49:26.7505674Z > Task :app:mergeDebugResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:26.7570784Z > Task :app:createDebugCompatibleScreenManifests
+build	Build Debug APK and Run Checks	2026-07-15T00:49:26.7593922Z > Task :app:extractDeepLinksDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:49:26.7620554Z > Task :core:data:extractDeepLinksDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:49:26.9540869Z > Task :core:data:processDebugManifest
+build	Build Debug APK and Run Checks	2026-07-15T00:49:26.9600832Z > Task :core:navigation:extractDeepLinksDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:26.9613507Z > Task :core:navigation:processDebugManifest
+build	Build Debug APK and Run Checks	2026-07-15T00:49:26.9637239Z > Task :core:ui:extractDeepLinksDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:26.9690487Z > Task :core:ui:processDebugManifest
+build	Build Debug APK and Run Checks	2026-07-15T00:49:26.9740525Z > Task :feature:calculator:extractDeepLinksDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:27.0562330Z > Task :feature:calculator:processDebugManifest
+build	Build Debug APK and Run Checks	2026-07-15T00:49:27.0590474Z > Task :feature:converter:extractDeepLinksDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:27.0656522Z > Task :feature:converter:processDebugManifest
+build	Build Debug APK and Run Checks	2026-07-15T00:49:27.0682038Z > Task :feature:finance:extractDeepLinksDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:27.1540906Z > Task :feature:finance:processDebugManifest
+build	Build Debug APK and Run Checks	2026-07-15T00:49:27.1600356Z > Task :feature:history:extractDeepLinksDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:27.1621027Z > Task :feature:history:processDebugManifest
+build	Build Debug APK and Run Checks	2026-07-15T00:49:27.1621924Z > Task :feature:settings:extractDeepLinksDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:27.1623177Z > Task :feature:settings:processDebugManifest
+build	Build Debug APK and Run Checks	2026-07-15T00:49:27.1623951Z > Task :feature:tools:extractDeepLinksDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:27.2542504Z > Task :feature:tools:processDebugManifest
+build	Build Debug APK and Run Checks	2026-07-15T00:49:27.9519767Z > Task :app:processDebugMainManifest
+build	Build Debug APK and Run Checks	2026-07-15T00:49:28.2504944Z > Task :app:processDebugManifest
+build	Build Debug APK and Run Checks	2026-07-15T00:49:28.2525991Z > Task :app:processDebugManifestForPackage
+build	Build Debug APK and Run Checks	2026-07-15T00:49:28.3521689Z > Task :core:data:compileDebugLibraryResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:28.3550778Z > Task :core:navigation:compileDebugLibraryResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:28.3607073Z > Task :core:ui:compileDebugLibraryResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:28.3680739Z > Task :feature:calculator:compileDebugLibraryResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:28.3696067Z > Task :feature:converter:compileDebugLibraryResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:28.3750612Z > Task :feature:finance:compileDebugLibraryResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:28.3791993Z > Task :feature:history:compileDebugLibraryResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:28.3805359Z > Task :feature:settings:compileDebugLibraryResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:28.3850589Z > Task :feature:tools:compileDebugLibraryResources FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:30.4504372Z > Task :app:processDebugResources
+build	Build Debug APK and Run Checks	2026-07-15T00:49:33.0566553Z > Task :core:data:kspDebugKotlin
+build	Build Debug APK and Run Checks	2026-07-15T00:49:36.2528100Z > Task :app:checkDebugDuplicateClasses
+build	Build Debug APK and Run Checks	2026-07-15T00:49:37.5570490Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:49:37.5660969Z > Task :core:ui:compileDebugKotlin
+build	Build Debug APK and Run Checks	2026-07-15T00:49:37.5745953Z w: file:///home/runner/work/Calculator/Calculator/core/ui/src/main/java/com/nexuralabs/calculator/core/ui/theme/Theme.kt:31:20 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+build	Build Debug APK and Run Checks	2026-07-15T00:49:37.5830374Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:49:37.5890787Z > Task :core:ui:compileDebugJavaWithJavac NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:49:37.6540839Z > Task :core:navigation:compileDebugKotlin
+build	Build Debug APK and Run Checks	2026-07-15T00:49:37.7571182Z > Task :core:navigation:compileDebugJavaWithJavac NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:50:03.0530797Z > Task :core:data:compileDebugKotlin
+build	Build Debug APK and Run Checks	2026-07-15T00:50:06.2503148Z > Task :app:mergeExtDexDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:50:07.5502959Z > Task :core:ui:bundleLibCompileToJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:50:07.7516626Z > Task :core:navigation:bundleLibCompileToJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:50:36.5530887Z > Task :core:navigation:bundleLibRuntimeToJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:50:36.7534753Z > Task :core:ui:bundleLibRuntimeToJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:50:43.8520812Z > Task :core:data:compileDebugJavaWithJavac
+build	Build Debug APK and Run Checks	2026-07-15T00:50:45.9535875Z > Task :core:data:transformDebugClassesWithAsm
+build	Build Debug APK and Run Checks	2026-07-15T00:50:46.0518797Z > Task :core:data:bundleLibCompileToJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:50:46.0530932Z > Task :core:data:bundleLibRuntimeToJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:50:53.3533356Z > Task :feature:converter:kspDebugKotlin
+build	Build Debug APK and Run Checks	2026-07-15T00:50:53.6551039Z > Task :feature:calculator:kspDebugKotlin
+build	Build Debug APK and Run Checks	2026-07-15T00:50:55.4530578Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:50:55.4590943Z > Task :feature:finance:compileDebugKotlin
+build	Build Debug APK and Run Checks	2026-07-15T00:50:55.4652171Z w: file:///home/runner/work/Calculator/Calculator/feature/finance/src/main/java/com/nexuralabs/calculator/feature/finance/InvestmentScreen.kt:76:235 'fun Modifier.menuAnchor(): Modifier' is deprecated. Use overload that takes ExposedDropdownMenuAnchorType and enabled parameters.
+build	Build Debug APK and Run Checks	2026-07-15T00:50:55.5510327Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:50:55.5532707Z > Task :feature:finance:compileDebugJavaWithJavac NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:50:55.5610927Z > Task :feature:finance:bundleLibCompileToJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:50:59.7540856Z > Task :feature:history:kspDebugKotlin
+build	Build Debug APK and Run Checks	2026-07-15T00:51:03.0530594Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:51:03.0555368Z > Task :feature:calculator:compileDebugKotlin
+build	Build Debug APK and Run Checks	2026-07-15T00:51:03.0581838Z w: file:///home/runner/work/Calculator/Calculator/feature/calculator/src/main/java/com/nexuralabs/calculator/feature/calculator/CalculatorScreen.kt:234:57 'static field VIBRATOR_SERVICE: String' is deprecated. Deprecated in Java.
+build	Build Debug APK and Run Checks	2026-07-15T00:51:03.0612306Z w: file:///home/runner/work/Calculator/Calculator/feature/calculator/src/main/java/com/nexuralabs/calculator/feature/calculator/CalculatorScreen.kt:278:27 'val Icons.Filled.CompareArrows: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Filled.CompareArrows.
+build	Build Debug APK and Run Checks	2026-07-15T00:51:04.6550250Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:51:04.6610974Z > Task :feature:history:compileDebugKotlin
+build	Build Debug APK and Run Checks	2026-07-15T00:51:05.3510614Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:51:05.3540906Z > Task :feature:converter:compileDebugKotlin
+build	Build Debug APK and Run Checks	2026-07-15T00:51:05.3562083Z w: file:///home/runner/work/Calculator/Calculator/feature/converter/src/main/java/com/nexuralabs/calculator/feature/converter/CurrencyScreen.kt:65:214 'fun Modifier.menuAnchor(): Modifier' is deprecated. Use overload that takes ExposedDropdownMenuAnchorType and enabled parameters.
+build	Build Debug APK and Run Checks	2026-07-15T00:51:05.3652576Z w: file:///home/runner/work/Calculator/Calculator/feature/converter/src/main/java/com/nexuralabs/calculator/feature/converter/CurrencyScreen.kt:73:208 'fun Modifier.menuAnchor(): Modifier' is deprecated. Use overload that takes ExposedDropdownMenuAnchorType and enabled parameters.
+build	Build Debug APK and Run Checks	2026-07-15T00:51:05.3656744Z w: file:///home/runner/work/Calculator/Calculator/feature/converter/src/main/java/com/nexuralabs/calculator/feature/converter/GenericConverterDetailScreen.kt:101:198 'fun Modifier.menuAnchor(): Modifier' is deprecated. Use overload that takes ExposedDropdownMenuAnchorType and enabled parameters.
+build	Build Debug APK and Run Checks	2026-07-15T00:51:05.3670594Z w: file:///home/runner/work/Calculator/Calculator/feature/converter/src/main/java/com/nexuralabs/calculator/feature/converter/LandConverterScreen.kt:61:210 'fun Modifier.menuAnchor(): Modifier' is deprecated. Use overload that takes ExposedDropdownMenuAnchorType and enabled parameters.
+build	Build Debug APK and Run Checks	2026-07-15T00:51:05.3702108Z w: file:///home/runner/work/Calculator/Calculator/feature/converter/src/main/java/com/nexuralabs/calculator/feature/converter/LandConverterScreen.kt:69:204 'fun Modifier.menuAnchor(): Modifier' is deprecated. Use overload that takes ExposedDropdownMenuAnchorType and enabled parameters.
+build	Build Debug APK and Run Checks	2026-07-15T00:51:16.0557325Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:51:16.0605631Z > Task :feature:calculator:compileDebugJavaWithJavac
+build	Build Debug APK and Run Checks	2026-07-15T00:51:16.1521068Z > Task :feature:history:compileDebugJavaWithJavac
+build	Build Debug APK and Run Checks	2026-07-15T00:51:16.2511384Z > Task :feature:converter:compileDebugJavaWithJavac
+build	Build Debug APK and Run Checks	2026-07-15T00:51:18.0540945Z > Task :feature:history:transformDebugClassesWithAsm
+build	Build Debug APK and Run Checks	2026-07-15T00:51:18.1504247Z > Task :feature:history:bundleLibCompileToJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:18.1535626Z > Task :feature:calculator:transformDebugClassesWithAsm
+build	Build Debug APK and Run Checks	2026-07-15T00:51:18.1560840Z > Task :feature:converter:transformDebugClassesWithAsm
+build	Build Debug APK and Run Checks	2026-07-15T00:51:18.1580817Z > Task :feature:calculator:bundleLibCompileToJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:18.1594879Z > Task :feature:converter:bundleLibCompileToJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:18.1632710Z > Task :feature:calculator:bundleLibRuntimeToJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:18.4540973Z > Task :feature:history:bundleLibRuntimeToJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:18.8520237Z > Task :feature:converter:bundleLibRuntimeToJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:19.5521043Z > Task :feature:finance:bundleLibRuntimeToJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:20.0522959Z > Task :core:data:processDebugJavaRes
+build	Build Debug APK and Run Checks	2026-07-15T00:51:20.0559055Z > Task :core:navigation:processDebugJavaRes
+build	Build Debug APK and Run Checks	2026-07-15T00:51:20.0627841Z > Task :core:ui:processDebugJavaRes
+build	Build Debug APK and Run Checks	2026-07-15T00:51:20.0628539Z > Task :feature:calculator:processDebugJavaRes
+build	Build Debug APK and Run Checks	2026-07-15T00:51:20.1521200Z > Task :feature:converter:processDebugJavaRes
+build	Build Debug APK and Run Checks	2026-07-15T00:51:20.1546263Z > Task :feature:finance:processDebugJavaRes
+build	Build Debug APK and Run Checks	2026-07-15T00:51:20.1587667Z > Task :feature:history:processDebugJavaRes
+build	Build Debug APK and Run Checks	2026-07-15T00:51:20.1611545Z > Task :feature:calculator:bundleLibRuntimeToDirDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:20.8521406Z > Task :feature:history:bundleLibRuntimeToDirDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:21.2502975Z > Task :core:data:bundleLibRuntimeToDirDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:21.3551214Z > Task :feature:tools:kspDebugKotlin
+build	Build Debug APK and Run Checks	2026-07-15T00:51:21.5541349Z > Task :feature:settings:kspDebugKotlin
+build	Build Debug APK and Run Checks	2026-07-15T00:51:21.5600932Z > Task :core:ui:bundleLibRuntimeToDirDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:21.7550929Z > Task :feature:converter:bundleLibRuntimeToDirDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:23.3522349Z > Task :feature:finance:bundleLibRuntimeToDirDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.2530879Z > Task :core:navigation:bundleLibRuntimeToDirDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.3520877Z > Task :app:mergeDebugJniLibFolders
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.3570668Z > Task :core:data:mergeDebugJniLibFolders
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.3670877Z > Task :core:data:mergeDebugNativeLibs NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.3720872Z > Task :core:data:copyDebugJniLibsProjectOnly
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.3837082Z > Task :core:navigation:mergeDebugJniLibFolders
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.3885668Z > Task :core:navigation:mergeDebugNativeLibs NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.3971636Z > Task :core:navigation:copyDebugJniLibsProjectOnly
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.3990881Z > Task :core:ui:mergeDebugJniLibFolders
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.4087713Z > Task :core:ui:mergeDebugNativeLibs NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.4111002Z > Task :core:ui:copyDebugJniLibsProjectOnly
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.4525732Z > Task :feature:calculator:mergeDebugJniLibFolders
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.4581292Z > Task :feature:calculator:mergeDebugNativeLibs NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.4693111Z > Task :feature:calculator:copyDebugJniLibsProjectOnly
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.4720679Z > Task :feature:converter:mergeDebugJniLibFolders
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.4810895Z > Task :feature:converter:mergeDebugNativeLibs NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.4870802Z > Task :feature:converter:copyDebugJniLibsProjectOnly
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.4960861Z > Task :feature:finance:mergeDebugJniLibFolders
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.4990698Z > Task :feature:finance:mergeDebugNativeLibs NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.5064896Z > Task :feature:finance:copyDebugJniLibsProjectOnly
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.5126657Z > Task :feature:history:mergeDebugJniLibFolders
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.5180801Z > Task :feature:history:mergeDebugNativeLibs NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.5240602Z > Task :feature:history:copyDebugJniLibsProjectOnly
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.5536247Z > Task :feature:settings:mergeDebugJniLibFolders
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.5600869Z > Task :feature:settings:mergeDebugNativeLibs NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.5660769Z > Task :feature:settings:copyDebugJniLibsProjectOnly
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.5720768Z > Task :feature:tools:mergeDebugJniLibFolders
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.5750707Z > Task :feature:tools:mergeDebugNativeLibs NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:24.5780685Z > Task :feature:tools:copyDebugJniLibsProjectOnly
+build	Build Debug APK and Run Checks	2026-07-15T00:51:25.0523481Z > Task :app:mergeDebugNativeLibs
+build	Build Debug APK and Run Checks	2026-07-15T00:51:25.6520816Z > Task :app:stripDebugDebugSymbols
+build	Build Debug APK and Run Checks	2026-07-15T00:51:25.7510735Z > Task :feature:settings:compileDebugKotlin
+build	Build Debug APK and Run Checks	2026-07-15T00:51:26.6521010Z > Task :feature:settings:compileDebugJavaWithJavac
+build	Build Debug APK and Run Checks	2026-07-15T00:51:26.7520943Z > Task :feature:settings:transformDebugClassesWithAsm
+build	Build Debug APK and Run Checks	2026-07-15T00:51:26.7560907Z > Task :feature:settings:bundleLibCompileToJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:26.7610802Z > Task :feature:settings:bundleLibRuntimeToJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:27.0521001Z > Task :feature:settings:processDebugJavaRes
+build	Build Debug APK and Run Checks	2026-07-15T00:51:27.1530972Z > Task :feature:settings:bundleLibRuntimeToDirDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:27.4550873Z > Task :app:writeDebugAppMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:51:27.5553694Z > Task :app:writeDebugSigningConfigVersions
+build	Build Debug APK and Run Checks	2026-07-15T00:51:28.4520809Z > Task :app:validateSigningDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:28.4555218Z > Task :core:data:checkDebugAarMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:51:28.4580511Z > Task :core:data:stripDebugDebugSymbols NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:28.4581192Z > Task :core:data:copyDebugJniLibsProjectAndLocalJars
+build	Build Debug APK and Run Checks	2026-07-15T00:51:28.4581770Z > Task :core:data:extractDeepLinksForAarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:28.5578734Z > Task :core:data:mergeDebugGeneratedProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:28.5630540Z > Task :core:data:mergeDebugConsumerProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:28.6530873Z > Task :core:data:prepareDebugArtProfile
+build	Build Debug APK and Run Checks	2026-07-15T00:51:28.6560745Z > Task :core:data:prepareLintJarForPublish
+build	Build Debug APK and Run Checks	2026-07-15T00:51:28.9560859Z > Task :core:data:mergeDebugJavaResource
+build	Build Debug APK and Run Checks	2026-07-15T00:51:29.3503233Z > Task :core:navigation:checkDebugAarMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:51:29.3580997Z > Task :core:navigation:stripDebugDebugSymbols NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:29.3633611Z > Task :core:navigation:copyDebugJniLibsProjectAndLocalJars
+build	Build Debug APK and Run Checks	2026-07-15T00:51:30.3510988Z > Task :feature:tools:compileDebugKotlin
+build	Build Debug APK and Run Checks	2026-07-15T00:51:30.7530894Z > Task :feature:tools:compileDebugJavaWithJavac
+build	Build Debug APK and Run Checks	2026-07-15T00:51:30.8531047Z > Task :feature:tools:transformDebugClassesWithAsm
+build	Build Debug APK and Run Checks	2026-07-15T00:51:30.8553014Z > Task :feature:tools:bundleLibCompileToJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:35.6506316Z > Task :core:data:extractDebugAnnotations
+build	Build Debug APK and Run Checks	2026-07-15T00:51:35.6522202Z > Task :core:navigation:extractDebugAnnotations
+build	Build Debug APK and Run Checks	2026-07-15T00:51:35.6574149Z > Task :feature:tools:bundleLibRuntimeToJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:35.6594334Z > Task :feature:tools:processDebugJavaRes
+build	Build Debug APK and Run Checks	2026-07-15T00:51:35.6595112Z > Task :app:kspDebugKotlin
+build	Build Debug APK and Run Checks	2026-07-15T00:51:35.7540834Z > Task :feature:tools:bundleLibRuntimeToDirDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:36.4531118Z > Task :core:data:syncDebugLibJars
+build	Build Debug APK and Run Checks	2026-07-15T00:51:36.5524295Z > Task :core:data:bundleDebugAar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:36.5525225Z > Task :core:data:assembleDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:36.5580994Z > Task :core:navigation:extractDeepLinksForAarDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:36.5632555Z > Task :core:navigation:mergeDebugGeneratedProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:36.5660522Z > Task :core:navigation:mergeDebugConsumerProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:36.5743552Z > Task :core:navigation:prepareDebugArtProfile
+build	Build Debug APK and Run Checks	2026-07-15T00:51:36.5748597Z > Task :core:navigation:prepareLintJarForPublish
+build	Build Debug APK and Run Checks	2026-07-15T00:51:36.5820770Z > Task :core:navigation:mergeDebugJavaResource
+build	Build Debug APK and Run Checks	2026-07-15T00:51:36.5880972Z > Task :core:navigation:syncDebugLibJars
+build	Build Debug APK and Run Checks	2026-07-15T00:51:36.5910352Z > Task :core:navigation:bundleDebugAar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:36.5925832Z > Task :core:navigation:assembleDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:36.6502439Z > Task :core:ui:checkDebugAarMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:51:36.6540690Z > Task :core:ui:stripDebugDebugSymbols NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.2507371Z > Task :core:ui:copyDebugJniLibsProjectAndLocalJars
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.2560750Z > Task :core:ui:extractDebugAnnotations
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.2602095Z > Task :core:ui:extractDeepLinksForAarDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.2640811Z > Task :core:ui:mergeDebugGeneratedProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.2680577Z > Task :core:ui:mergeDebugConsumerProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.2740476Z > Task :core:ui:prepareDebugArtProfile
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.2750509Z > Task :core:ui:prepareLintJarForPublish
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.2800453Z > Task :core:ui:mergeDebugJavaResource
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.3510794Z > Task :core:ui:syncDebugLibJars
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.3540504Z > Task :core:ui:bundleDebugAar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.3570447Z > Task :core:ui:assembleDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.3571040Z > Task :feature:calculator:checkDebugAarMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.3571746Z > Task :feature:calculator:stripDebugDebugSymbols NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.3572553Z > Task :feature:calculator:copyDebugJniLibsProjectAndLocalJars
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.4549533Z > Task :app:mergeLibDexDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.4564328Z > Task :feature:calculator:extractDebugAnnotations
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.4624720Z > Task :feature:calculator:extractDeepLinksForAarDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.4671402Z > Task :feature:calculator:prepareDebugArtProfile
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.4720675Z > Task :feature:calculator:prepareLintJarForPublish
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.4810694Z > Task :feature:calculator:mergeDebugGeneratedProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.4834446Z > Task :feature:calculator:mergeDebugConsumerProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.4870516Z > Task :feature:calculator:mergeDebugJavaResource
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.4894178Z > Task :feature:converter:checkDebugAarMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.4982306Z > Task :feature:converter:stripDebugDebugSymbols NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.5504484Z > Task :feature:converter:copyDebugJniLibsProjectAndLocalJars
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.5540557Z > Task :feature:calculator:syncDebugLibJars
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.5571179Z > Task :feature:converter:extractDebugAnnotations
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.5573972Z > Task :feature:calculator:bundleDebugAar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.5600432Z > Task :feature:calculator:assembleDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.5630547Z > Task :feature:converter:extractDeepLinksForAarDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.5700576Z > Task :feature:converter:prepareDebugArtProfile
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.5730577Z > Task :feature:converter:mergeDebugGeneratedProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.5731550Z > Task :feature:converter:prepareLintJarForPublish
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.5784151Z > Task :feature:converter:mergeDebugConsumerProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.5815687Z > Task :feature:converter:mergeDebugJavaResource
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.5836304Z > Task :feature:finance:checkDebugAarMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.6541196Z > Task :feature:finance:stripDebugDebugSymbols NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.6594598Z > Task :feature:finance:copyDebugJniLibsProjectAndLocalJars
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.6620696Z > Task :feature:finance:extractDebugAnnotations
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.6633728Z > Task :feature:finance:extractDeepLinksForAarDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.6720844Z > Task :feature:finance:mergeDebugGeneratedProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.6815725Z > Task :feature:finance:mergeDebugConsumerProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.6841825Z > Task :feature:converter:syncDebugLibJars
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.6976107Z > Task :feature:finance:prepareDebugArtProfile
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.7010493Z > Task :feature:finance:prepareLintJarForPublish
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.7102427Z > Task :feature:finance:mergeDebugJavaResource
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.7570751Z > Task :feature:converter:bundleDebugAar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.7655001Z > Task :feature:converter:assembleDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.7730875Z > Task :feature:finance:syncDebugLibJars
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.7731881Z > Task :feature:history:checkDebugAarMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.7732480Z > Task :feature:history:stripDebugDebugSymbols NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.7733065Z > Task :feature:finance:bundleDebugAar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.7733545Z > Task :feature:finance:assembleDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.7734097Z > Task :feature:history:copyDebugJniLibsProjectAndLocalJars
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.7734817Z > Task :feature:history:extractDeepLinksForAarDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.7735490Z > Task :feature:history:extractDebugAnnotations
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.7736048Z > Task :feature:history:prepareDebugArtProfile
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.7736646Z > Task :feature:history:mergeDebugGeneratedProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.7737260Z > Task :feature:history:prepareLintJarForPublish
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.7737865Z > Task :feature:history:mergeDebugConsumerProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.8525924Z > Task :feature:history:mergeDebugJavaResource
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.8538329Z > Task :feature:settings:checkDebugAarMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.8539346Z > Task :feature:settings:stripDebugDebugSymbols NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.8540795Z > Task :feature:settings:copyDebugJniLibsProjectAndLocalJars
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.8541692Z > Task :feature:settings:extractDebugAnnotations
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.8542425Z > Task :feature:history:syncDebugLibJars
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.8543218Z > Task :feature:settings:extractDeepLinksForAarDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.8544126Z > Task :feature:settings:mergeDebugGeneratedProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.8544967Z > Task :feature:history:bundleDebugAar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.8545649Z > Task :feature:history:assembleDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.8546366Z > Task :feature:settings:prepareDebugArtProfile
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.8547131Z > Task :feature:settings:mergeDebugConsumerProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.9503462Z > Task :feature:settings:prepareLintJarForPublish
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.9540700Z > Task :feature:settings:mergeDebugJavaResource
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.9560214Z > Task :feature:tools:checkDebugAarMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.9570763Z > Task :feature:tools:stripDebugDebugSymbols NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.9726270Z > Task :feature:tools:copyDebugJniLibsProjectAndLocalJars
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.9727170Z > Task :feature:settings:syncDebugLibJars
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.9780465Z > Task :feature:settings:bundleDebugAar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:37.9810415Z > Task :feature:settings:assembleDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.0621241Z > Task :feature:tools:extractDeepLinksForAarDebug FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.0677751Z > Task :feature:tools:extractDebugAnnotations
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.0728307Z > Task :feature:tools:prepareDebugArtProfile
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.0781203Z > Task :feature:tools:mergeDebugGeneratedProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.0839252Z > Task :feature:tools:prepareLintJarForPublish
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.0906521Z > Task :feature:tools:mergeDebugConsumerProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.0935383Z > Task :feature:tools:mergeDebugJavaResource
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.1007340Z > Task :core:data:bundleDebugLocalLintAar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.1040594Z > Task :core:ui:bundleDebugLocalLintAar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.1060337Z > Task :feature:tools:syncDebugLibJars
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.1531196Z > Task :core:navigation:bundleDebugLocalLintAar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.1560931Z > Task :feature:tools:bundleDebugAar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.1590663Z > Task :feature:tools:assembleDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.1591599Z > Task :feature:calculator:bundleDebugLocalLintAar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.1621111Z > Task :feature:converter:bundleDebugLocalLintAar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.1650661Z > Task :feature:finance:bundleDebugLocalLintAar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.1680669Z > Task :feature:tools:bundleDebugLocalLintAar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.1681685Z > Task :feature:history:bundleDebugLocalLintAar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.2506852Z > Task :app:preDebugAndroidTestBuild SKIPPED
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.2556070Z > Task :core:data:createFullJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.2580553Z > Task :feature:settings:bundleDebugLocalLintAar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.2610280Z > Task :core:data:writeDebugLintModelMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.2693811Z > Task :core:navigation:createFullJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.2719748Z > Task :core:navigation:writeDebugLintModelMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.2770777Z > Task :core:ui:createFullJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.2800561Z > Task :core:ui:writeDebugLintModelMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.2830473Z > Task :feature:calculator:createFullJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.2831480Z > Task :feature:calculator:writeDebugLintModelMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.3513998Z > Task :feature:converter:createFullJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.3554452Z > Task :feature:converter:writeDebugLintModelMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.3610910Z > Task :feature:finance:writeDebugLintModelMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.3640545Z > Task :feature:history:createFullJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.3702081Z > Task :feature:finance:createFullJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.3730511Z > Task :feature:history:writeDebugLintModelMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.3731373Z > Task :feature:settings:createFullJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.3760606Z > Task :feature:settings:writeDebugLintModelMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.3770471Z > Task :feature:tools:createFullJarDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.3800543Z > Task :feature:tools:writeDebugLintModelMetadata
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.4510833Z > Task :app:extractProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.4570747Z > Task :core:data:extractProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:38.4600536Z > Task :core:navigation:extractProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:39.5514649Z > Task :app:compileDebugKotlin
+build	Build Debug APK and Run Checks	2026-07-15T00:51:40.5531416Z > Task :app:compileDebugJavaWithJavac
+build	Build Debug APK and Run Checks	2026-07-15T00:51:40.5544166Z > Task :app:hiltCollectClassesDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:40.9520940Z > Task :core:data:generateDebugLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:40.9568476Z > Task :app:processDebugJavaRes
+build	Build Debug APK and Run Checks	2026-07-15T00:51:43.5541456Z > Task :app:hiltAggregateDepsDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:44.0531100Z > Task :core:navigation:generateDebugLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:44.1520880Z > Task :core:ui:extractProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:44.2520787Z > Task :core:ui:generateDebugLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:44.2550658Z > Task :feature:calculator:extractProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:46.8541265Z > Task :app:mergeDebugJavaResource
+build	Build Debug APK and Run Checks	2026-07-15T00:51:46.8563879Z > Task :feature:converter:extractProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:46.8612789Z > Task :feature:calculator:generateDebugLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:46.8640644Z > Task :feature:finance:extractProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:46.9531405Z > Task :feature:converter:generateDebugLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:46.9590733Z > Task :feature:history:extractProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:46.9641359Z > Task :feature:finance:generateDebugLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:46.9718835Z > Task :feature:settings:extractProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:47.0540912Z > Task :feature:settings:generateDebugLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:47.0550746Z > Task :feature:history:generateDebugLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:47.0660902Z > Task :app:preDebugUnitTestBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:47.0750732Z > Task :feature:tools:extractProguardFiles
+build	Build Debug APK and Run Checks	2026-07-15T00:51:47.1502074Z > Task :feature:tools:generateDebugLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:47.3521003Z > Task :app:generateDebugLintReportModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:51.8512417Z > Task :app:hiltJavaCompileDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:52.3510942Z > Task :app:transformDebugClassesWithAsm
+build	Build Debug APK and Run Checks	2026-07-15T00:51:53.1510968Z > Task :app:dexBuilderDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:53.7550958Z > Task :app:mergeDebugGlobalSynthetics
+build	Build Debug APK and Run Checks	2026-07-15T00:51:53.9540764Z > Task :app:mergeProjectDexDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:53.9570788Z > Task :app:bundleDebugClassesToCompileJar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:54.7510994Z > Task :app:generateDebugAndroidTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:54.7530751Z > Task :app:generateDebugUnitTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.5504478Z > Task :app:packageDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.5510584Z > Task :app:createDebugApkListingFileRedirect
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.5520415Z > Task :app:assembleDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.5551312Z > Task :core:data:preDebugAndroidTestBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.5578210Z > Task :core:data:generateDebugAndroidTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.5611334Z > Task :core:data:preDebugUnitTestBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.5620447Z > Task :core:data:generateDebugUnitTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.5661214Z > Task :core:navigation:preDebugAndroidTestBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.5700709Z > Task :core:navigation:generateDebugAndroidTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.5720663Z > Task :core:navigation:preDebugUnitTestBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.6503661Z > Task :core:navigation:generateDebugUnitTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.6520913Z > Task :core:ui:preDebugAndroidTestBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.6524254Z > Task :core:ui:generateDebugAndroidTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.6555769Z > Task :core:ui:preDebugUnitTestBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.6556448Z > Task :core:ui:generateDebugUnitTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.6557153Z > Task :feature:calculator:preDebugAndroidTestBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.6557921Z > Task :feature:calculator:generateDebugAndroidTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.6558655Z > Task :feature:calculator:preDebugUnitTestBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.7511027Z > Task :feature:calculator:generateDebugUnitTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.7544265Z > Task :feature:converter:preDebugAndroidTestBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.7563573Z > Task :feature:converter:generateDebugAndroidTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.7610666Z > Task :feature:converter:preDebugUnitTestBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.7640618Z > Task :feature:converter:generateDebugUnitTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.7670690Z > Task :feature:finance:preDebugAndroidTestBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.7700714Z > Task :feature:finance:generateDebugAndroidTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.7720746Z > Task :feature:finance:preDebugUnitTestBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.7730465Z > Task :feature:finance:generateDebugUnitTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.7770767Z > Task :feature:history:preDebugAndroidTestBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.8522451Z > Task :feature:history:generateDebugAndroidTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.8530548Z > Task :feature:history:preDebugUnitTestBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.8591224Z > Task :feature:history:generateDebugUnitTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.8621152Z > Task :feature:settings:preDebugAndroidTestBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.8640770Z > Task :feature:settings:generateDebugAndroidTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.8670711Z > Task :feature:settings:preDebugUnitTestBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.8681122Z > Task :feature:settings:generateDebugUnitTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.8721035Z > Task :feature:tools:preDebugAndroidTestBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.9508572Z > Task :feature:tools:generateDebugAndroidTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.9509513Z > Task :feature:tools:preDebugUnitTestBuild UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.9510499Z > Task :feature:tools:generateDebugUnitTestLintModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.9511130Z > Task :app:bundleDebugClassesToRuntimeJar
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.9523564Z > Task :app:kspDebugUnitTestKotlin SKIPPED
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.9532884Z > Task :app:compileDebugUnitTestKotlin NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.9560694Z > Task :app:processDebugUnitTestJavaRes NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.9585326Z > Task :app:javaPreCompileDebugUnitTest FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.9644292Z > Task :app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:57.9680893Z > Task :app:hiltCollectClassesDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.0525550Z > Task :app:hiltAggregateDepsDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.0530637Z > Task :app:hiltJavaCompileDebugUnitTest NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.1526665Z > Task :app:transformDebugUnitTestClassesWithAsm
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.1550482Z > Task :app:testDebugUnitTest NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.1551092Z > Task :app:test UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.1600861Z > Task :core:data:generateDebugLintReportModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.2502308Z > Task :core:data:generateDebugUnitTestStubRFile
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.2520789Z > Task :core:data:kspDebugUnitTestKotlin SKIPPED
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.2540830Z > Task :core:data:compileDebugUnitTestKotlin NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.2542295Z > Task :core:data:processDebugUnitTestJavaRes NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.3521106Z > Task :core:data:javaPreCompileDebugUnitTest FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.3522351Z > Task :core:data:compileDebugUnitTestJavaWithJavac NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.3543645Z > Task :core:data:hiltCollectClassesDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.5511024Z > Task :core:data:hiltAggregateDepsDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.5540696Z > Task :core:data:hiltJavaCompileDebugUnitTest NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.5555208Z > Task :core:data:transformDebugUnitTestClassesWithAsm
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.5555979Z > Task :core:data:testDebugUnitTest NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.5556613Z > Task :core:data:test UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.5557232Z > Task :core:navigation:generateDebugLintReportModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.6510943Z > Task :core:navigation:generateDebugUnitTestStubRFile
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.6529446Z > Task :core:navigation:compileDebugUnitTestKotlin NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.6530998Z > Task :core:navigation:javaPreCompileDebugUnitTest FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.6532099Z > Task :core:navigation:compileDebugUnitTestJavaWithJavac NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.6533122Z > Task :core:navigation:processDebugUnitTestJavaRes NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.6533910Z > Task :core:navigation:testDebugUnitTest NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.6534606Z > Task :core:navigation:test UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.6540630Z > Task :core:ui:generateDebugLintReportModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.7521393Z > Task :core:ui:generateDebugUnitTestStubRFile
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.7522716Z > Task :core:ui:compileDebugUnitTestKotlin NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.7550854Z > Task :core:ui:javaPreCompileDebugUnitTest FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.7558052Z > Task :core:ui:compileDebugUnitTestJavaWithJavac NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.7605786Z > Task :core:ui:processDebugUnitTestJavaRes NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.7620669Z > Task :core:ui:testDebugUnitTest NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.7622131Z > Task :core:ui:test UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.8546154Z > Task :feature:calculator:generateDebugLintReportModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.8576256Z > Task :feature:calculator:generateDebugUnitTestStubRFile
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.8586999Z > Task :feature:calculator:kspDebugUnitTestKotlin SKIPPED
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.8642771Z > Task :feature:calculator:compileDebugUnitTestKotlin NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.8693040Z > Task :feature:calculator:processDebugUnitTestJavaRes NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.9502530Z > Task :feature:calculator:javaPreCompileDebugUnitTest FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.9535034Z > Task :feature:calculator:compileDebugUnitTestJavaWithJavac NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:58.9585096Z > Task :feature:calculator:hiltCollectClassesDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.3521087Z > Task :feature:calculator:hiltAggregateDepsDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.3580940Z > Task :feature:calculator:hiltJavaCompileDebugUnitTest NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.3620971Z > Task :feature:calculator:transformDebugUnitTestClassesWithAsm
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.3650893Z > Task :feature:calculator:testDebugUnitTest NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.3731789Z > Task :feature:calculator:test UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.4511157Z > Task :feature:converter:generateDebugLintReportModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.4557377Z > Task :feature:converter:generateDebugUnitTestStubRFile
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.4590613Z > Task :feature:converter:kspDebugUnitTestKotlin SKIPPED
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.4600778Z > Task :feature:converter:compileDebugUnitTestKotlin NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.4644050Z > Task :feature:converter:processDebugUnitTestJavaRes NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.4702224Z > Task :feature:converter:javaPreCompileDebugUnitTest FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.4733803Z > Task :feature:converter:compileDebugUnitTestJavaWithJavac NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.4742145Z > Task :feature:converter:hiltCollectClassesDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.5523360Z > Task :feature:converter:hiltAggregateDepsDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.5524249Z > Task :feature:converter:hiltJavaCompileDebugUnitTest NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.5525658Z > Task :feature:converter:transformDebugUnitTestClassesWithAsm
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.5526365Z > Task :feature:converter:testDebugUnitTest NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.5526931Z > Task :feature:converter:test UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.5527496Z > Task :feature:finance:generateDebugLintReportModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.6511224Z > Task :feature:finance:generateDebugUnitTestStubRFile
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.6540985Z > Task :feature:finance:compileDebugUnitTestKotlin NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.6570904Z > Task :feature:finance:javaPreCompileDebugUnitTest FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.6572054Z > Task :feature:finance:compileDebugUnitTestJavaWithJavac NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.6600645Z > Task :feature:finance:processDebugUnitTestJavaRes NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.6630715Z > Task :feature:finance:testDebugUnitTest NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.6641776Z > Task :feature:finance:test UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.6660655Z > Task :feature:history:generateDebugLintReportModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.7510933Z > Task :feature:history:generateDebugUnitTestStubRFile
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.7541130Z > Task :feature:history:kspDebugUnitTestKotlin SKIPPED
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.7542201Z > Task :feature:history:compileDebugUnitTestKotlin NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.7571138Z > Task :feature:history:processDebugUnitTestJavaRes NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.7582436Z > Task :feature:history:javaPreCompileDebugUnitTest FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.7611091Z > Task :feature:history:compileDebugUnitTestJavaWithJavac NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.7640723Z > Task :feature:history:hiltCollectClassesDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.8522283Z > Task :feature:history:hiltAggregateDepsDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.8523685Z > Task :feature:history:hiltJavaCompileDebugUnitTest NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.8547652Z > Task :feature:history:transformDebugUnitTestClassesWithAsm
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.8570805Z > Task :feature:history:testDebugUnitTest NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.8600716Z > Task :feature:history:test UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.9503398Z > Task :feature:settings:generateDebugLintReportModel
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.9540879Z > Task :feature:settings:generateDebugUnitTestStubRFile
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.9542144Z > Task :feature:settings:kspDebugUnitTestKotlin SKIPPED
+build	Build Debug APK and Run Checks	2026-07-15T00:51:59.9570637Z > Task :feature:settings:compileDebugUnitTestKotlin NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.0504826Z > Task :feature:settings:processDebugUnitTestJavaRes NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.0532038Z > Task :feature:settings:javaPreCompileDebugUnitTest FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.0541153Z > Task :feature:settings:compileDebugUnitTestJavaWithJavac NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.0542128Z > Task :feature:settings:hiltCollectClassesDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.0543034Z > Task :feature:settings:hiltAggregateDepsDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.0543943Z > Task :feature:settings:hiltJavaCompileDebugUnitTest NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.1555404Z > Task :feature:settings:transformDebugUnitTestClassesWithAsm
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.1580650Z > Task :feature:settings:testDebugUnitTest NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.1581314Z > Task :feature:settings:test UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.1581828Z > Task :feature:tools:generateDebugLintReportModel
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.2531057Z > Task :feature:tools:generateDebugUnitTestStubRFile
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.2560587Z > Task :feature:tools:kspDebugUnitTestKotlin SKIPPED
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.2561323Z > Task :feature:tools:compileDebugUnitTestKotlin NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.2562093Z > Task :feature:tools:processDebugUnitTestJavaRes NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.2562834Z > Task :feature:tools:javaPreCompileDebugUnitTest FROM-CACHE
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.3521124Z > Task :feature:tools:compileDebugUnitTestJavaWithJavac NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.3550993Z > Task :feature:tools:hiltCollectClassesDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.3551957Z > Task :feature:tools:hiltAggregateDepsDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.3580689Z > Task :feature:tools:hiltJavaCompileDebugUnitTest NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.4546260Z > Task :feature:tools:transformDebugUnitTestClassesWithAsm
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.4560965Z > Task :feature:tools:testDebugUnitTest NO-SOURCE
+build	Build Debug APK and Run Checks	2026-07-15T00:52:00.4590607Z > Task :feature:tools:test UP-TO-DATE
+build	Build Debug APK and Run Checks	2026-07-15T00:52:04.5502733Z > Task :core:navigation:lintAnalyzeDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:04.5511323Z > Task :core:data:lintAnalyzeDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:07.6502625Z > Task :core:ui:lintAnalyzeDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:23.2502140Z > Task :feature:finance:lintAnalyzeDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:25.2505404Z > Task :feature:calculator:lintAnalyzeDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:27.6511055Z > Task :feature:converter:lintAnalyzeDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:34.6520979Z > Task :feature:history:lintAnalyzeDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:35.0502384Z > Task :app:lintAnalyzeDebugAndroidTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:35.4511949Z > Task :app:lintAnalyzeDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:35.5527041Z > Task :feature:settings:lintAnalyzeDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:35.7510583Z > Task :core:data:lintAnalyzeDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:35.7540903Z > Task :core:data:lintAnalyzeDebugAndroidTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:35.9541091Z > Task :core:navigation:lintAnalyzeDebugAndroidTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:36.0507015Z > Task :core:navigation:lintAnalyzeDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:36.1631068Z > Task :core:ui:lintAnalyzeDebugAndroidTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:36.2521002Z > Task :core:ui:lintAnalyzeDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:36.5502787Z > Task :feature:calculator:lintAnalyzeDebugAndroidTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:36.6511032Z > Task :feature:calculator:lintAnalyzeDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:37.1528242Z > Task :feature:converter:lintAnalyzeDebugAndroidTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:37.2513156Z > Task :feature:converter:lintAnalyzeDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:37.5530974Z > Task :feature:finance:lintAnalyzeDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:37.6510938Z > Task :feature:finance:lintAnalyzeDebugAndroidTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:38.0541022Z > Task :feature:history:lintAnalyzeDebugAndroidTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:38.0570477Z > Task :feature:history:lintAnalyzeDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:38.4531130Z > Task :feature:settings:lintAnalyzeDebugAndroidTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:38.4540796Z > Task :feature:settings:lintAnalyzeDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:38.7518909Z > Task :feature:tools:lintAnalyzeDebugUnitTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:38.7530965Z > Task :feature:tools:lintAnalyzeDebugAndroidTest
+build	Build Debug APK and Run Checks	2026-07-15T00:52:38.9530927Z > Task :core:data:lintReportDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:38.9580634Z > Task :core:data:lintDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:38.9610454Z > Task :core:data:lint
+build	Build Debug APK and Run Checks	2026-07-15T00:52:38.9640475Z > Task :core:data:check
+build	Build Debug APK and Run Checks	2026-07-15T00:52:38.9690723Z > Task :core:navigation:lintReportDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:38.9720488Z > Task :core:navigation:lintDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:38.9750434Z > Task :core:navigation:lint
+build	Build Debug APK and Run Checks	2026-07-15T00:52:38.9775637Z > Task :core:navigation:check
+build	Build Debug APK and Run Checks	2026-07-15T00:52:38.9830762Z > Task :core:ui:lintReportDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:38.9890929Z > Task :core:ui:lintDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:38.9900461Z > Task :core:ui:lint
+build	Build Debug APK and Run Checks	2026-07-15T00:52:38.9950624Z > Task :core:ui:check
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.0502394Z > Task :feature:calculator:lintReportDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.0530709Z > Task :feature:calculator:lintDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.0560596Z > Task :feature:calculator:lint
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.0580461Z > Task :feature:calculator:check
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.1550235Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.1566047Z > Task :feature:converter:lintReportDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.1591209Z Wrote HTML report to file:///home/runner/work/Calculator/Calculator/feature/converter/build/reports/lint-results-debug.html
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.1592186Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.1592369Z > Task :feature:converter:lintDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.1592877Z > Task :feature:converter:lint
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.1593314Z > Task :feature:converter:check
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.1593590Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.1593770Z > Task :feature:finance:lintReportDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.1594801Z Wrote HTML report to file:///home/runner/work/Calculator/Calculator/feature/finance/build/reports/lint-results-debug.html
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.1595679Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.1595852Z > Task :feature:finance:lintDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.1596308Z > Task :feature:finance:lint
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.1597284Z > Task :feature:finance:check
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.2513180Z > Task :feature:history:lintReportDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.2540681Z > Task :feature:history:lintDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.2541466Z > Task :feature:history:lint
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.2541940Z > Task :feature:history:check
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.3502480Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.3511149Z > Task :feature:settings:lintReportDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.3512424Z Wrote HTML report to file:///home/runner/work/Calculator/Calculator/feature/settings/build/reports/lint-results-debug.html
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.3513579Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.3513919Z > Task :feature:settings:lintDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.3514541Z > Task :feature:settings:lint
+build	Build Debug APK and Run Checks	2026-07-15T00:52:39.3515127Z > Task :feature:settings:check
+build	Build Debug APK and Run Checks	2026-07-15T00:52:41.1530884Z > Task :feature:tools:lintAnalyzeDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:41.3502486Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:52:41.3520906Z > Task :feature:tools:lintReportDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:41.3539739Z Wrote HTML report to file:///home/runner/work/Calculator/Calculator/feature/tools/build/reports/lint-results-debug.html
+build	Build Debug APK and Run Checks	2026-07-15T00:52:41.3577610Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:52:41.3578229Z > Task :feature:tools:lintDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:41.3601177Z > Task :feature:tools:lint
+build	Build Debug APK and Run Checks	2026-07-15T00:52:41.3630777Z > Task :feature:tools:check
+build	Build Debug APK and Run Checks	2026-07-15T00:52:46.5511092Z > Task :app:lintAnalyzeDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:46.7501535Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:52:46.7503366Z > Task :app:lintReportDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:46.7504608Z Wrote HTML report to file:///home/runner/work/Calculator/Calculator/app/build/reports/lint-results-debug.html
+build	Build Debug APK and Run Checks	2026-07-15T00:52:46.7505637Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:52:46.7505977Z > Task :app:lintDebug
+build	Build Debug APK and Run Checks	2026-07-15T00:52:46.7506550Z > Task :app:lint
+build	Build Debug APK and Run Checks	2026-07-15T00:52:46.7507082Z > Task :app:check
+build	Build Debug APK and Run Checks	2026-07-15T00:52:46.7507485Z 
+build	Build Debug APK and Run Checks	2026-07-15T00:52:46.8503325Z BUILD SUCCESSFUL in 5m 33s
+build	Build Debug APK and Run Checks	2026-07-15T00:52:46.8504038Z 485 actionable tasks: 423 executed, 62 from cache
+build	Build Debug APK and Run Checks	2026-07-15T00:52:46.8504736Z Configuration cache entry stored.
+build	Post Set up JDK 21	﻿2026-07-15T00:52:47.2001924Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+build	Post Set up JDK 21	2026-07-15T00:52:47.2003250Z Post job cleanup.
+build	Post Set up JDK 21	2026-07-15T00:52:47.3334914Z (node:2906) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+build	Post Set up JDK 21	2026-07-15T00:52:47.3336247Z (Use `node --trace-deprecation ...` to show where the warning was created)
+build	Post Set up JDK 21	2026-07-15T00:52:47.3588551Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/Calculator/Calculator --files-from manifest.txt --use-compress-program zstdmt
+build	Post Set up JDK 21	2026-07-15T00:52:51.9056135Z (node:2906) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+build	Post Set up JDK 21	2026-07-15T00:52:52.8823179Z Sent 0 of 998520674 (0.0%), 0.0 MBs/sec
+build	Post Set up JDK 21	2026-07-15T00:52:53.8861298Z Sent 536870912 of 998520674 (53.8%), 255.7 MBs/sec
+build	Post Set up JDK 21	2026-07-15T00:52:54.4330257Z Sent 998520674 of 998520674 (100.0%), 373.4 MBs/sec
+build	Post Set up JDK 21	2026-07-15T00:52:54.5781876Z Cache saved with the key: setup-java-Linux-x64-gradle-7862ac3fe2d59bbe841647a4c981b9b744f7b4383867a86f53b55ca5b01d45c4
+build	Post Checkout Code	﻿2026-07-15T00:52:54.6005618Z Node 20 is being deprecated. This workflow is running with Node 24 by default. If you need to temporarily use Node 20, you can set the ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true environment variable. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+build	Post Checkout Code	2026-07-15T00:52:54.6006905Z Post job cleanup.
+build	Post Checkout Code	2026-07-15T00:52:54.6913377Z [command]/usr/bin/git version
+build	Post Checkout Code	2026-07-15T00:52:54.6958707Z git version 2.54.0
+build	Post Checkout Code	2026-07-15T00:52:54.7034919Z Temporarily overriding HOME='/home/runner/work/_temp/590c9fd8-ee70-4cde-91e1-a057b158568c' before making global git config changes
+build	Post Checkout Code	2026-07-15T00:52:54.7039066Z Adding repository directory to the temporary git global config as a safe directory
+build	Post Checkout Code	2026-07-15T00:52:54.7042383Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/Calculator/Calculator
+build	Post Checkout Code	2026-07-15T00:52:54.7085634Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+build	Post Checkout Code	2026-07-15T00:52:54.7127053Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+build	Post Checkout Code	2026-07-15T00:52:54.7385114Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+build	Post Checkout Code	2026-07-15T00:52:54.7416819Z http.https://github.com/.extraheader
+build	Post Checkout Code	2026-07-15T00:52:54.7430745Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+build	Post Checkout Code	2026-07-15T00:52:54.7474945Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+build	Post Checkout Code	2026-07-15T00:52:54.7751327Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+build	Post Checkout Code	2026-07-15T00:52:54.7792978Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+build	Complete job	﻿2026-07-15T00:52:54.8241502Z Cleaning up orphan processes
+build	Complete job	2026-07-15T00:52:54.8582975Z Terminate orphan process: pid (2311) (java)
+build	Complete job	2026-07-15T00:52:54.8702837Z Terminate orphan process: pid (2492) (java)
+build	Complete job	2026-07-15T00:52:54.8725062Z Terminate orphan process: pid (2668) (java)
+build	Complete job	2026-07-15T00:52:54.8771091Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
