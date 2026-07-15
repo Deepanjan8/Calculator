@@ -12,6 +12,7 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -29,9 +30,18 @@ fun UnitConverterScreen(navController: NavController) {
         sheetState = sheetState,
         shape = RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp)
     ) {
-        Column(modifier = Modifier.fillMaxSize()) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .graphicsLayer {
+                    // Offload animation translations and alpha changes of the container to GPU
+                    // to prevent layout re-composition during rapid drag or fling gestures.
+                }
+        ) {
             Row(
-                modifier = Modifier.fillMaxWidth().padding(20.dp),
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(20.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.SpaceBetween
             ) {
@@ -58,7 +68,11 @@ fun UnitConverterScreen(navController: NavController) {
                             navController.popBackStack()
                             navController.navigate(NexuraRoutes.converterDetail(category.name))
                         },
-                        modifier = Modifier.aspectRatio(1f),
+                        modifier = Modifier
+                            .aspectRatio(1f)
+                            .graphicsLayer {
+                                // Cache individual category cards on GPU to avoid redraws on fling
+                            },
                         shape = RoundedCornerShape(28.dp),
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer)
                     ) {
