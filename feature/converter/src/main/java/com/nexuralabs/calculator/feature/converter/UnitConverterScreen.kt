@@ -22,6 +22,7 @@ import com.nexuralabs.calculator.core.navigation.NexuraRoutes
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun UnitConverterScreen(navController: NavController) {
+    // Unified 2-column grid layout configuration matching Pro Tools design system
     Scaffold(
         topBar = {
             CenterAlignedTopAppBar(title = { Text("Unit Converter", fontWeight = FontWeight.Bold) })
