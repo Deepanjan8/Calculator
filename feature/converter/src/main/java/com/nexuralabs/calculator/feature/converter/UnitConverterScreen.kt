@@ -12,12 +12,10 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import com.nexuralabs.calculator.core.navigation.NexuraRoutes
 
@@ -30,7 +28,7 @@ fun UnitConverterScreen(navController: NavController) {
         }
     ) { padding ->
         LazyVerticalGrid(
-            columns = GridCells.Fixed(3),
+            columns = GridCells.Fixed(2),
             contentPadding = PaddingValues(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp),
             horizontalArrangement = Arrangement.spacedBy(16.dp),
@@ -39,18 +37,18 @@ fun UnitConverterScreen(navController: NavController) {
             items(converterCategories, key = { it.name }) { category ->
                 Card(
                     onClick = { navController.navigate(NexuraRoutes.converterDetail(category.name)) },
-                    modifier = Modifier.aspectRatio(1f).shadow(4.dp, RoundedCornerShape(28.dp)),
+                    modifier = Modifier.aspectRatio(1f),
                     shape = RoundedCornerShape(28.dp),
-                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer.copy(alpha = 0.7f))
+                    colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.primaryContainer)
                 ) {
                     Column(
-                        modifier = Modifier.fillMaxSize().padding(8.dp),
+                        modifier = Modifier.fillMaxSize().padding(12.dp),
                         horizontalAlignment = Alignment.CenterHorizontally,
                         verticalArrangement = Arrangement.Center
                     ) {
-                        Icon(imageVector = category.icon, contentDescription = category.name, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(36.dp))
+                        Icon(imageVector = category.icon, contentDescription = category.name, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(44.dp))
                         Spacer(Modifier.height(8.dp))
-                        Text(text = category.name, fontSize = 14.sp, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
+                        Text(text = category.name, style = MaterialTheme.typography.titleSmall, fontWeight = FontWeight.Bold, textAlign = TextAlign.Center)
                     }
                 }
             }
