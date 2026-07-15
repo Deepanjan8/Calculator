@@ -53,21 +53,21 @@ fun InvestmentScreen(navController: NavController) {
             OutlinedTextField(
                 value = principal, onValueChange = { principal = it; showError = false },
                 label = { Text("Principal Amount") }, isError = showError && principal.isEmpty(),
-                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
                 modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(16.dp)
             )
             Spacer(Modifier.height(16.dp))
             OutlinedTextField(
                 value = rate, onValueChange = { rate = it; showError = false },
                 label = { Text("Annual Interest Rate (%)") }, isError = showError && rate.isEmpty(),
-                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
                 modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(16.dp)
             )
             Spacer(Modifier.height(16.dp))
             OutlinedTextField(
                 value = time, onValueChange = { time = it; showError = false },
                 label = { Text("Time (years)") }, isError = showError && time.isEmpty(),
-                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
                 modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(16.dp)
             )
             Spacer(Modifier.height(16.dp))

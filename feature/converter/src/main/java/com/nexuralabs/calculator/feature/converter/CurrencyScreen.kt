@@ -52,7 +52,7 @@ fun CurrencyScreen(navController: NavController) {
                 onValueChange = { amount = it; showError = false },
                 label = { Text("Amount to Convert") },
                 isError = showError && amount.isEmpty(),
-                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
                 modifier = Modifier.fillMaxWidth(),
                 shape = RoundedCornerShape(16.dp)
             )

@@ -51,7 +51,7 @@ fun LandConverterScreen(navController: NavController) {
             OutlinedTextField(
                 value = inputValue, onValueChange = { inputValue = it; showError = false },
                 label = { Text("Value to Convert") }, isError = showError && inputValue.isEmpty(),
-                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
                 modifier = Modifier.fillMaxWidth(), shape = RoundedCornerShape(16.dp)
             )
             Spacer(Modifier.height(20.dp))
