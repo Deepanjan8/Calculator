@@ -1,7 +1,13 @@
 name: Advanced Build and Sign APK
 
 on:
+  push:
+    tags:
+      - 'v*'
   workflow_dispatch:
+
+permissions:
+  contents: write
 
 jobs:
   build:
@@ -26,15 +32,34 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
-    - name: Build and Sign APK
+    - name: Build Debug and Release APK
       env:
         NEO_STORE_PASSWORD: ${{ secrets.STORE_PASSWORD }}
         NEO_KEY_ALIAS: ${{ secrets.KEY_ALIAS }}
         NEO_KEY_PASSWORD: ${{ secrets.KEY_PASSWORD }}
-      run: ./gradlew :app:assembleRelease --parallel --build-cache --configuration-cache
+      run: ./gradlew assembleDebug assembleRelease --parallel --build-cache --configuration-cache
 
-    - name: Upload Signed APK
+    - name: Upload Signed APK Artifact
       uses: actions/upload-artifact@v4
       with:
         name: Nexura-Calculator-Signed
         path: app/build/outputs/apk/release/*.apk
+
+    - name: Create GitHub Release
+      uses: softprops/action-gh-release@v2
+      with:
+        files: |
+          app/build/outputs/apk/debug/*.apk
+          app/build/outputs/apk/release/*.apk
+        tag_name: ${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || 'v2.0.0' }}
+        name: "Release ${{ startsWith(github.ref, 'refs/tags/') && github.ref_name || 'v2.0.0' }}"
+        body: |
+          ### What's New in v2.0.0
+          - **Unit Converter Bottom Sheet:** The Unit Converter screen is now fully rendered as a bottom sheet with a beautiful layout hierarchy and a close button, resolving the black cutoff and rendering delay issues.
+          - **Transparent Scrim Logic:** Leverages native `ModalBottomSheet` scrim behaviors to keep the main calculator grid perfectly visible and crisp in real-time.
+          - **Modular Architecture Slot API:** Refactored navigation to use Compose slot API for decoupling feature modules, maintaining strict project structure separation.
+          - **Performance & Stability:** Under-the-hood stability improvements, optimized recompositions, and fixed warning/compilation outputs.
+        draft: false
+        prerelease: false
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
