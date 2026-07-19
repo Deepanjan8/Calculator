@@ -20,7 +20,6 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import java.util.*
 
-@Suppress("DEPRECATION")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun LandConverterScreen(navController: NavController) {
@@ -60,7 +59,7 @@ fun LandConverterScreen(navController: NavController) {
             Row(modifier = Modifier.fillMaxWidth()) {
                 var expFrom by remember { mutableStateOf(false) }
                 ExposedDropdownMenuBox(expanded = expFrom, onExpandedChange = { expFrom = !expFrom }, modifier = Modifier.weight(1f)) {
-                    OutlinedTextField(value = fromUnit, onValueChange = {}, readOnly = true, label = { Text("From") }, trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expFrom) }, modifier = Modifier.menuAnchor(), shape = RoundedCornerShape(12.dp))
+                    OutlinedTextField(value = fromUnit, onValueChange = {}, readOnly = true, label = { Text("From") }, trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expFrom) }, modifier = Modifier.menuAnchor(type = ExposedDropdownMenuAnchorType.PrimaryNotEditable, enabled = true), shape = RoundedCornerShape(12.dp))
                     ExposedDropdownMenu(expanded = expFrom, onDismissRequest = { expFrom = false }) {
                         units.forEach { u -> DropdownMenuItem(text = { Text(u) }, onClick = { fromUnit = u; expFrom = false }) }
                     }
@@ -68,7 +67,7 @@ fun LandConverterScreen(navController: NavController) {
                 Spacer(Modifier.width(12.dp))
                 var expTo by remember { mutableStateOf(false) }
                 ExposedDropdownMenuBox(expanded = expTo, onExpandedChange = { expTo = !expTo }, modifier = Modifier.weight(1f)) {
-                    OutlinedTextField(value = toUnit, onValueChange = {}, readOnly = true, label = { Text("To") }, trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expTo) }, modifier = Modifier.menuAnchor(), shape = RoundedCornerShape(12.dp))
+                    OutlinedTextField(value = toUnit, onValueChange = {}, readOnly = true, label = { Text("To") }, trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expTo) }, modifier = Modifier.menuAnchor(type = ExposedDropdownMenuAnchorType.PrimaryNotEditable, enabled = true), shape = RoundedCornerShape(12.dp))
                     ExposedDropdownMenu(expanded = expTo, onDismissRequest = { expTo = false }) {
                         units.forEach { u -> DropdownMenuItem(text = { Text(u) }, onClick = { toUnit = u; expTo = false }) }
                     }

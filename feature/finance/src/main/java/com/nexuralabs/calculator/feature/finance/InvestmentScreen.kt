@@ -20,7 +20,6 @@ import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import kotlin.math.pow
 
-@Suppress("DEPRECATION")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun InvestmentScreen(navController: NavController) {
@@ -75,7 +74,7 @@ fun InvestmentScreen(navController: NavController) {
             Spacer(Modifier.height(16.dp))
             var exp by remember { mutableStateOf(false) }
             ExposedDropdownMenuBox(expanded = exp, onExpandedChange = { exp = !exp }) {
-                OutlinedTextField(value = frequency, onValueChange = {}, readOnly = true, label = { Text("Compounding Frequency") }, trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(exp) }, modifier = Modifier.fillMaxWidth().menuAnchor(), shape = RoundedCornerShape(16.dp))
+                OutlinedTextField(value = frequency, onValueChange = {}, readOnly = true, label = { Text("Compounding Frequency") }, trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(exp) }, modifier = Modifier.fillMaxWidth().menuAnchor(type = ExposedDropdownMenuAnchorType.PrimaryNotEditable, enabled = true), shape = RoundedCornerShape(16.dp))
                 ExposedDropdownMenu(expanded = exp, onDismissRequest = { exp = false }) {
                     frequencies.forEach { f -> DropdownMenuItem(text = { Text(f) }, onClick = { frequency = f; exp = false }) }
                 }
