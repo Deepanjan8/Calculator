@@ -19,7 +19,6 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 
-@Suppress("DEPRECATION")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun CurrencyScreen(navController: NavController) {
@@ -64,7 +63,7 @@ fun CurrencyScreen(navController: NavController) {
             Row(modifier = Modifier.fillMaxWidth()) {
                 var expFrom by remember { mutableStateOf(false) }
                 ExposedDropdownMenuBox(expanded = expFrom, onExpandedChange = { expFrom = !expFrom }, modifier = Modifier.weight(1f)) {
-                    OutlinedTextField(value = fromCurrency, onValueChange = {}, readOnly = true, label = { Text("From") }, trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expFrom) }, modifier = Modifier.menuAnchor(), shape = RoundedCornerShape(12.dp))
+                    OutlinedTextField(value = fromCurrency, onValueChange = {}, readOnly = true, label = { Text("From") }, trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expFrom) }, modifier = Modifier.menuAnchor(type = ExposedDropdownMenuAnchorType.PrimaryNotEditable, enabled = true), shape = RoundedCornerShape(12.dp))
                     ExposedDropdownMenu(expanded = expFrom, onDismissRequest = { expFrom = false }) {
                         currencies.forEach { c -> DropdownMenuItem(text = { Text(c) }, onClick = { fromCurrency = c; expFrom = false }) }
                     }
@@ -72,7 +71,7 @@ fun CurrencyScreen(navController: NavController) {
                 Spacer(Modifier.width(12.dp))
                 var expTo by remember { mutableStateOf(false) }
                 ExposedDropdownMenuBox(expanded = expTo, onExpandedChange = { expTo = !expTo }, modifier = Modifier.weight(1f)) {
-                    OutlinedTextField(value = toCurrency, onValueChange = {}, readOnly = true, label = { Text("To") }, trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expTo) }, modifier = Modifier.menuAnchor(), shape = RoundedCornerShape(12.dp))
+                    OutlinedTextField(value = toCurrency, onValueChange = {}, readOnly = true, label = { Text("To") }, trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expTo) }, modifier = Modifier.menuAnchor(type = ExposedDropdownMenuAnchorType.PrimaryNotEditable, enabled = true), shape = RoundedCornerShape(12.dp))
                     ExposedDropdownMenu(expanded = expTo, onDismissRequest = { expTo = false }) {
                         currencies.forEach { c -> DropdownMenuItem(text = { Text(c) }, onClick = { toCurrency = c; expTo = false }) }
                     }

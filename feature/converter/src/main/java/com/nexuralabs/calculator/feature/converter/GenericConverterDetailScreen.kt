@@ -17,10 +17,9 @@ import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 
-@Suppress("DEPRECATION")
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun GenericConverterDetailScreen(navController: NavController, category: String) {
@@ -119,7 +118,7 @@ fun GenericConverterDetailScreen(navController: NavController, category: String)
 fun UnitDropdown(units: List<String>, selected: String, label: String, modifier: Modifier, onSelect: (String) -> Unit) {
     var expanded by remember { mutableStateOf(false) }
     ExposedDropdownMenuBox(expanded = expanded, onExpandedChange = { expanded = !expanded }, modifier = modifier) {
-        OutlinedTextField(value = selected, onValueChange = {}, readOnly = true, label = { Text(label) }, trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded) }, modifier = Modifier.menuAnchor(), shape = RoundedCornerShape(12.dp))
+        OutlinedTextField(value = selected, onValueChange = {}, readOnly = true, label = { Text(label) }, trailingIcon = { ExposedDropdownMenuDefaults.TrailingIcon(expanded) }, modifier = Modifier.menuAnchor(type = ExposedDropdownMenuAnchorType.PrimaryNotEditable, enabled = true), shape = RoundedCornerShape(12.dp))
         ExposedDropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
             units.forEach { u -> DropdownMenuItem(text = { Text(u) }, onClick = { onSelect(u); expanded = false }) }
         }

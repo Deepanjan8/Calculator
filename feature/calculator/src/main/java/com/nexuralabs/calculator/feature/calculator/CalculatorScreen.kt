@@ -27,7 +27,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import androidx.hilt.navigation.compose.hiltViewModel
+import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.nexuralabs.calculator.core.navigation.NexuraRoutes
 import com.nexuralabs.calculator.core.navigation.ObserveHistorySelection
@@ -252,16 +252,14 @@ private fun DisplaySection(
     )
 }
 
-@Suppress("DEPRECATION")
 @android.annotation.SuppressLint("MissingPermission")
 private fun handleButtonClick(btn: KeypadButton, hapticEnabled: Boolean, context: Context, viewModel: CalculatorViewModel) {
     if (hapticEnabled) {
-        val vibrator = context.getSystemService(Context.VIBRATOR_SERVICE) as? Vibrator
+        val vibrator = context.getSystemService(Vibrator::class.java)
         if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.Q) {
             vibrator?.vibrate(VibrationEffect.createPredefined(VibrationEffect.EFFECT_CLICK))
         } else {
-            @Suppress("DEPRECATION")
-            vibrator?.vibrate(10)
+            vibrator?.vibrate(VibrationEffect.createOneShot(10, VibrationEffect.DEFAULT_AMPLITUDE))
         }
     }
     viewModel.onButtonClick(btn.command)
